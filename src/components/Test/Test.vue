@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import "~/stylus/_stylebase.styl";
+@import "~/src/stylus/_stylebase.styl";
 
 $var--local = #ff0000
 
