@@ -1,3 +1,3 @@
-import TestColors from "./TestColors.vue";
+import TestColors from './TestColors.vue';
 
 export default TestColors;

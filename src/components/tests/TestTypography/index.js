@@ -1,3 +1,3 @@
-import TestTypography from "./TestTypography.vue";
+import TestTypography from './TestTypography.vue';
 
 export default TestTypography;

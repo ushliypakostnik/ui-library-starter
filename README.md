@@ -1,5 +1,7 @@
 # Vue Components UI Library Starter
 
+[Package on NPM](https://www.npmjs.com/package/ui-library-starter)
+
 ### Project setup
 ```
 npm install
