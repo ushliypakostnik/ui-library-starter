@@ -1,6 +1,6 @@
 # Vue Components UI Library Starter
 
-## Project setup
+### Project setup
 ```
 npm install
 ```

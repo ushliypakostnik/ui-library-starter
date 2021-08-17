@@ -1,2 +1,4 @@
-export { default as Test } from './Test';
-export { default as Test2 } from './Test2';
+export { default as Test } from './tests/Test';
+export { default as Test2 } from './tests/Test2';
+export { default as TestColors } from './tests/TestColors';
+export { default as TestTypography } from './tests/TestTypography';

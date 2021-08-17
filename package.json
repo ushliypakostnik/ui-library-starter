@@ -1,19 +1,31 @@
 {
   "name": "ui-library-starter",
-  "description": "Vue Components UI Library Starter.",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Vue Components UI Library Starter",
+  "version": "0.1.6",
+  "private": false,
+  "main": "dist/ui-library-starter.umd.min.js",
+  "unpkg": "dist/ui-library-starter.umd.min.js",
+  "jsdelivr": "dist/ui-library-starter.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name ui-library-starter src/main.js",
+    "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "lint": "vue-cli-service lint"
+    "docs:build": "vuepress build docs"
   },
   "author": "Levon Gambaryan",
+  "license": "MIT",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ushliypakostnik/ui-library-starter"
+    "url": "https://github.com/ushliypakostnik/ui-library-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ushliypakostnik/ui-library-starter/issues"
   },
   "dependencies": {
     "core-js": "^3.6.5"

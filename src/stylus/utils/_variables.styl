@@ -1,1 +1,35 @@
+// Test
+//////////////////////////////////////////////////////
 $var--global = #ff0000
+
+// Project variables
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// Palette
+//////////////////////////////////////////////////////
+
+$colors = {
+  cat: #515bd4,
+  dog: #dd2a7b,
+  bird: #fd5f00,
+  wood: #feda77,
+  stone: #8bc24c,
+  sea: #13334c,
+}
+// Dependencies colors
+$colors["text"] = $colors.sea
+$colors["placeholder"] = rgba($colors.sea, 0.6)
+
+
+// Breakpoints
+//////////////////////////////////////////////////////
+
+$breakpoints = {
+  min: 320px,
+  tablet: 768px,
+  desktop: 1025px,
+}
+$breakpoints["mobile--max"] = $breakpoints.tablet - 1
+$breakpoints["tablet--max"] = $breakpoints.desktop - 1

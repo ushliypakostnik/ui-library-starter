@@ -25,7 +25,7 @@ module.exports = {
         nav: [{ text: 'GitHub', link: '' }],
         sidebar: [
           {
-            title: `Основная информация`,
+            title: `Intro`,
             // collapsable: false,
             children: [
               '/',
@@ -33,7 +33,24 @@ module.exports = {
             ],
           },
           {
-            title: `Компоненты`,
+            title: `Constants`,
+            children: [
+              {
+                title: `Colors`,
+                path: '/constants/colors',
+              },
+              {
+                title: `Breakpoints`,
+                path: '/constants/breakpoints',
+              },
+              {
+                title: `Typography`,
+                path: '/constants/typography',
+              },
+            ],
+          },
+          {
+            title: `Components`,
             children: [
               {
                 title: `Test`,

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div>Тест глобального использования компонент</div>
+    <div>Component global usage test</div>
 
-    <div>Тест реактивности: {{ test }}</div>
+    <div>Reactivity: {{ test }}</div>
 
     <input v-model="test" />
   </div>
@@ -16,6 +16,6 @@ export default {
     return {
       test: '',
     };
-  }
+  },
 };
 </script>

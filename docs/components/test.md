@@ -1,10 +1,10 @@
 # Test
 
-## Описание
+## Description
 
-Краткое описание, если требуется.
+A short description, if required.
 
-## Подключение
+## Connection
 
 ```vue
 <template>
@@ -27,20 +27,20 @@
 | :------- | :-------------- |
 
 ### Styles
-```sass
+```stylus
 ```
 
-## Рендер
+## Render
 
 <Test />
 
-## Исходный код компонента
+## Source code
 
-```scss
-// В @/stylus/utils/_variables.styl:
+```stylus
+// ~/src/stylus/utils/_variables.styl:
 $var--global = #ff0000
 ```
 
-<<< @/src/components/Test/Test.vue
+<<< @/src/components/tests/Test/Test.vue
 
-<<< @/src/components/Test2/Test2.vue
+<<< @/src/components/tests/Test2/Test2.vue

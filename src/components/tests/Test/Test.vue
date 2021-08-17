@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="test--local">Тест стилей компонента</div>
-    <div class="test--global">Тест глобальных стилей</div>
+    <div class="test--local">Component Styles Test</div>
+    <div class="test--global">Global Styles Test</div>
     <Test2 />
   </div>
 </template>
