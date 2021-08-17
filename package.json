@@ -42,5 +42,13 @@
     "prettier": "^2.2.1",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.8.2"
-  }
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vuepress",
+    "docs",
+    "library",
+    "ui"
+  ]
 }
