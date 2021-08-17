@@ -19,7 +19,7 @@
     "dist/*",
     "src/*"
   ],
-  "homepage": "",
+  "homepage": "https://ui-library-starter.netlify.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/ushliypakostnik/ui-library-starter.git"
