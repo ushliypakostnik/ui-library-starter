@@ -5,27 +5,15 @@
 // Attention! You shouldn't add anything to this file, except what should be absolutely accurate everywhere!
 // No "styling" (except for: root and body), just normalization and preparation!
 
-:root
-  scroll-behavior: smooth;
-  min-width: $breakpoints.min;
-
-body
-  font-family: $font-family, sans-serif;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeSpeed
-  color $colors.text
-  overflow-x hidden
-
 *
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin 0
+  padding 0
+  box-sizing border-box
 
 img,
 picture
-  max-width: 100%;
-  display: block;
+  max-width 100%
+  display block
 
 a
   color inherit
@@ -47,19 +35,4 @@ a
 
 table
   width 100%
-
-
-// Customize Placeholder
-//////////////////////////////////////////////////////
-
-
-::-webkit-input-placeholder {color: $colors.placeholder !important;}
-::-moz-placeholder          {color: $colors.placeholder !important;} // Firefox 19+
-:-moz-placeholder           {color: $colors.placeholder !important;} // Firefox 18-
-:-ms-input-placeholder      {color: $colors.placeholder !important;}
-
-:focus::-webkit-input-placeholder {color: transparent;}
-:focus::-moz-placeholder          {color: transparent;}
-:focus:-moz-placeholder           {color: transparent;}
-:focus:-ms-input-placeholder      {color: transparent;}
 

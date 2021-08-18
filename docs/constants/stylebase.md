@@ -16,12 +16,36 @@
 </style>
 ```
 
-Организация стилей дочерних проектов может иметь подобную структуру, только первый импорт в основном файле - основного файла библиотеки:
+Организация стилей дочерних проектов может иметь подобную структуру, только первый импорт в основном файле - основного файла библиотеки и приехавших с ней шрифтов:
 
 <code>@/src/stylus/_stylebase.styl</code> дочернего проекта:
 
 ```stylus
 @import '~ui-library-starter/src/stylus/_stylebase.styl';
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.eot');
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+    url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
+    url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.woff2') format('woff2'),
+    url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.woff') format('woff'),
+    url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.eot');
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
+    url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
+    url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.woff2') format('woff2'),
+    url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.woff') format('woff'),
+    url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}
 ```
 
 Да, это можно назвать «глобальными стилями-невидимками» или что-то такое. Мы предоставляем глобальные константы гайдлайна и всю прочую мощь препроцессора всем компонентным системам - библиотеке и всем ее «читателям». Мы предоставляем точную и лаконичную полноценную дизайн-систему - препроцессор и стилизуемые с его помощью компоненты дочерним проектам.
