@@ -8,9 +8,9 @@ module.exports = {
   },
 
   themeConfig: {
-    repoLabel: 'Murick is best!',
+    repoLabel: 'GitHub repo',
     // git repo here... gitlab, github
-    repo: '',
+    repo: 'https://github.com/ushliypakostnik/ui-library-starter.git',
     docsDir: 'docs',
     search: true,
     locales: {
@@ -22,7 +22,7 @@ module.exports = {
             buttonText: 'Refresh',
           },
         },
-        nav: [{ text: 'GitHub', link: '' }],
+        nav: [{ text: 'NPM', link: 'https://www.npmjs.com/package/ui-library-starter' }],
         sidebar: [
           {
             title: `Intro`,
@@ -30,11 +30,16 @@ module.exports = {
             children: [
               '/',
               '/start',
+              '/links',
             ],
           },
           {
             title: `Constants`,
             children: [
+              {
+                title: `_stylebase.styl`,
+                path: '/constants/stylebase',
+              },
               {
                 title: `Colors`,
                 path: '/constants/colors',
@@ -46,6 +51,10 @@ module.exports = {
               {
                 title: `Typography`,
                 path: '/constants/typography',
+              },
+              {
+                title: `Others`,
+                path: '/constants/others',
               },
             ],
           },

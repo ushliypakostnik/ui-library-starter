@@ -1,0 +1,75 @@
+// Project mixins
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+// The fundamental difference between mixins and placeholders is that, in addition to compilation nuances -
+// placeholders, unlike mixin parameters, are not included in media queries,
+// but themselves, at the same time, can use them. Mixins can take arguments, and most importantly, content.
+
+// Media
+//////////////////////////////////////////////////////
+
+$no-gadgets()
+  @media only screen and (max-width $breakpoints.desktop--max)
+    {block}
+
+$desktop()
+  @media only screen and (min-width $breakpoints.desktop)
+    {block}
+
+$gadgets()
+  @media only screen and (max-width $breakpoints.tablet--max)
+    {block}
+
+$tablet()
+  @media only screen and (min-width $breakpoints.tablet) and (max-width $breakpoints.tablet--max)
+    {block}
+
+$not-mobile()
+  @media only screen and (min-width $breakpoints.tablet)
+    {block}
+
+$mobile()
+  @media only screen and (max-width $breakpoints.mobile--max)
+    {block}
+
+
+// Opacity
+//////////////////////////////////////////////////////
+
+$opacity($name)
+  if $name == "soccer"
+    opacity $opacites.soccer // 0
+  if $name == "dancing"
+    opacity $opacites.dancing // 2px
+  if $name == "swimming"
+    opacity $opacites.swimming // 3px
+  if $name == "shooting"
+    opacity $opacites.shooting // 10px
+
+
+// Roundes
+//////////////////////////////////////////////////////
+
+$border-radius($name)
+  if $name == "waltz"
+    border-radius $border-radiuses.waltz // 1
+  if $name == "funky"
+    border-radius $border-radiuses.funky // 0.75
+  if $name == "rock"
+    border-radius $border-radiuses.rock // 0.66
+  if $name == "psy"
+    border-radius $border-radiuses.psy // 0.45
+  if $name == "reggae"
+    border-radius $border-radiuses.reggae // 0
+
+
+// Utilities
+//////////////////////////////////////////////////////
+// Mixins without arguments duplicate placeholders,
+// so it can be passed to media mixins
+
+$flex--center()
+  display flex
+  align-items center
+  justify-content center

@@ -8,13 +8,15 @@
 
 // Guide
 
-$letter-spacing = {
-  normal: normal
-}
+$font-family = 'Ubuntu'
 
 $font-weight = {
   regular: 400,
   bold: 700,
+}
+
+$letter-spacing = {
+  normal: normal
 }
 
 // Universal Typographic Mixin
@@ -23,7 +25,7 @@ $font-weight = {
 // We use one, only one, Karl, a universal mixin for all cases !!!!!!!!!!
 
 $text($name)
-  font-family "Golos Text"
+  font-family $font-family
   letter-spacing $letter-spacing.normal
 
   if $name == "elena"

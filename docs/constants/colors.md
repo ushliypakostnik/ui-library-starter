@@ -1,7 +1,10 @@
 # Colors
 
+Абстрагируйте все цвета из гайдлайна в короткие имена-маркеры.
+
+<code>~/src/stylus/utils/_variables.styl</code>
+
 ```stylus
-// ~/src/stylus/utils/_variables.styl:
 // Palette
 //////////////////////////////////////////////////////
 $colors = {
@@ -17,10 +20,17 @@ $colors["text"] = $colors.sea
 $colors["placeholder"] = rgba($colors.sea, 0.6)
 ```
 
-## Render
+В любом месте кода препроцессора или секции стилей SFC (при условии импорта стилевой базы) библиотеки или дочерних проектов вы можете передавать правильные цвета.
+
+```stylus
+.selector
+  color $colors.cat
+```
+
+Легко поддерживать тестовый компонент наглядно демонстрируюший палитру:
 
 <TestColors />
 
-## Source code
+<code>@/src/components/tests/TestColors/TestColors.vue</code>
 
 <<< @/src/components/tests/TestColors/TestColors.vue

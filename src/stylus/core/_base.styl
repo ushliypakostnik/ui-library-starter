@@ -1,0 +1,90 @@
+// Base normalize and fonts to body
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+// Attention! You shouldn't add anything to this file, except what should be absolutely accurate everywhere!
+// No "styling" (except for: root and body), just normalization and preparation!
+
+@font-face {
+  font-family: $font-family;
+  src: url('../../../assets/fonts/Ubuntu/Ubuntu-Regular.eot');
+  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+    url('../../../assets/fonts/Ubuntu/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../../assets/fonts/Ubuntu/Ubuntu-Regular.woff2') format('woff2'),
+    url('../../../assets/fonts/Ubuntu/Ubuntu-Regular.woff') format('woff'),
+    url('../../../assets/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: $font-weight.regular;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $font-family;
+  src: url('../../../assets/fonts/Ubuntu/Ubuntu-Bold.eot');
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
+    url('../../../assets/fonts/Ubuntu/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../../../assets/fonts/Ubuntu/Ubuntu-Bold.woff2') format('woff2'),
+    url('../../../assets/fonts/Ubuntu/Ubuntu-Bold.woff') format('woff'),
+    url('../../../assets/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: $font-weight.bold;
+  font-style: bold;
+}
+
+
+:root
+  scroll-behavior: smooth;
+  min-width: $breakpoints.min;
+
+body
+  font-family: $font-family, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed
+  color $colors.text
+  overflow-x hidden
+
+*
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+img,
+picture
+  max-width: 100%;
+  display: block;
+
+a
+  color inherit
+
+address
+  font-style normal
+
+// No outline on focus controls!!!
+button,
+input,
+textarea,
+a
+  outline none !important
+
+  &:hover,
+  &:active,
+  &:focus
+    outline none !important
+
+table
+  width 100%
+
+
+// Customize Placeholder
+//////////////////////////////////////////////////////
+
+
+::-webkit-input-placeholder {color: $colors.placeholder !important;}
+::-moz-placeholder          {color: $colors.placeholder !important;} // Firefox 19+
+:-moz-placeholder           {color: $colors.placeholder !important;} // Firefox 18-
+:-ms-input-placeholder      {color: $colors.placeholder !important;}
+
+:focus::-webkit-input-placeholder {color: transparent;}
+:focus::-moz-placeholder          {color: transparent;}
+:focus:-moz-placeholder           {color: transparent;}
+:focus:-ms-input-placeholder      {color: transparent;}
+

@@ -24,7 +24,7 @@ export default {
   grid-template-columns 1fr 1fr 1fr
 
   > li
-    @extend $flexCenter // ~/src/stylus/utils/_placeholders.styl
+    @extend $flex--center // ~/src/stylus/utils/_placeholders.styl
     height 300px
     color #ffffff
     $text("olga")
