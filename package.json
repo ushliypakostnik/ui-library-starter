@@ -1,14 +1,14 @@
 {
   "name": "ui-library-starter",
   "description": "Vue Components UI Library Starter",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "private": false,
   "main": "dist/ui-library-starter.umd.min.js",
   "unpkg": "dist/ui-library-starter.umd.min.js",
   "jsdelivr": "dist/ui-library-starter.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "rimraf ./src/static && cp -r ./docs/.vuepress/public ./src/static && vue-cli-service build --target lib --name ui-library-starter src/main.js",
+    "build": "vue-cli-service build --target lib --name ui-library-starter src/main.js",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
