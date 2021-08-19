@@ -28,6 +28,7 @@ export default {
 .link
   cursor pointer
   display inline
+  text-decoration none !important
   color $colors.primary
 
 .link:hover
