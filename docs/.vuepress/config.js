@@ -64,8 +64,10 @@ module.exports = {
               {
                 title: `Test`,
                 path: '/components/test',
-                children: [
-                ],
+              },
+              {
+                title: `Link`,
+                path: '/components/link',
               },
             ],
           },

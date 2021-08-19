@@ -55,6 +55,7 @@ body,
 
 .page
   overflow-x hidden
+  z-index 1000
 
   ul,
   p
@@ -127,8 +128,13 @@ strong
     +$mobile()
       font-size 11px
 
-.page
-  z-index 1000
+a.sidebar-link
+  font-size 15px
+  line-height 1.4
+  font-weight normal
+
+.sidebar-sub-header a.sidebar-link
+  font-size 12px
 
 table
   thead
@@ -136,49 +142,8 @@ table
       background darken($borderColor, 12%)
       color #fff
 
-  &.vdpTable
-    display table
-    margin 0
-
-    thead tr
-      border none
-
-    tr:nth-child(2n)
-      background none
-
-    .vdpHeadCell,
-    .vdpRow,
-    .vdpCellContent,
-    .vdpCell
-      border none
-
-    .vdpHeadCell
-      background none
-
-.vdpTimeUnit pre
-  margin 0
-  padding 2px
-
-.extra-class
-  margin-bottom $gutter * 1.5
-
-  + p
-    margin-top 50px
-
-  .tooltip-inner.popover-inner &
-    background transparent
-    padding 10px 20px
-    overflow auto
-    margin 0
-    height 100%
-
-.tooltip-inner.popover-inner
-  padding 0 !important
-
-a.sidebar-link
-  font-size 16px
-  line-height 1.4
-  font-weight normal
+  tr:nth-child(2n)
+    background none
 
 .theme-default-content:not(.custom) a.toolbar__button:hover
   text-decoration none
