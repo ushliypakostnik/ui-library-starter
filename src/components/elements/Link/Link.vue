@@ -23,12 +23,14 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "~/src/stylus/_stylebase.styl";
+
 .link
   cursor pointer
   display inline
-  color darken($colors.primary, 30%)
-  text-decoration none !important
+  color $colors.primary
 
-  &:hover
-    border-bottom 2px solid darken($colors.primary, 30%)
+.link:hover
+  text-decoration none !important
+  border-bottom 2px solid $colors.primary
 </style>
