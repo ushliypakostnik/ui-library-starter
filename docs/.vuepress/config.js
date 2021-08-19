@@ -12,7 +12,7 @@ module.exports = {
     // git repo here... gitlab, github
     repo: 'https://github.com/ushliypakostnik/ui-library-starter.git',
     docsDir: 'docs',
-    search: true,
+    search: false,
     locales: {
       '/': {
         // service worker is configured but will only register in production

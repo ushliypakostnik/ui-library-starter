@@ -18,13 +18,15 @@ $colors = {
 // Dependencies colors
 $colors["text"] = $colors.sea
 $colors["placeholder"] = rgba($colors.sea, 0.6)
+$colors["primary"] = $colors.cat
+$colors["secondary"] = $colors.stone
 ```
 
 В любом месте кода препроцессора или секции стилей SFC (при условии импорта стилевой базы) библиотеки или дочерних проектов вы можете передавать правильные цвета:
 
 ```stylus
 .selector
-  color $colors.cat
+  color $colors.primary
 ```
 
 Легко поддерживать тестовый компонент наглядно демонстрируюший палитру:
