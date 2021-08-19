@@ -28,7 +28,7 @@ export default {
 
   > li
     @extend $flex--center // ~/src/stylus/utils/_placeholders.styl
-    height 250px
+    height 200px
     color #ffffff // very bad - not palette color !!!
     $text("olga")
 
