@@ -16,7 +16,7 @@
 </style>
 ```
 
-Организация стилей дочерних проектов может или иметь подобную структуру или любую другую (например, если вы внедряете бибилиотеку в старый проект). Единственное требование: первый импорт в основном файле - основного файла библиотеки, далее - приехавших с ней шрифтов:
+Организация стилей дочерних проектов может или иметь подобную структуру или любую другую (например, если вы внедряете бибилиотеку в старый проект). Единственное требование: первый импорт в основном файле - основного файла библиотеки. Далее - подключение шрифтов и стилизация <code>:root</code> и <code>body</code>:
 
 <code class="code--path">@/src/stylus/_stylebase.styl</code> дочернего проекта:
 
@@ -24,34 +24,78 @@
 // Import UI Library stylebase
 @import '~ui-library-starter/src/stylus/_stylebase.styl';
 
+
 // Import UI Library fonts
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: $font-family;
   src: url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.eot');
   src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
     url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
     url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.woff2') format('woff2'),
     url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.woff') format('woff'),
     url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: $font-weight.regular;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: $font-family;
   src: url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.eot');
   src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
     url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
     url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.woff2') format('woff2'),
     url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.woff') format('woff'),
     url('~ui-library-starter/src/static/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
-  font-weight: 700;
+  font-weight: $font-weight.bold;
   font-style: bold;
 }
+
+
+// Base normalize
+
+:root
+  scroll-behavior smooth
+
+body
+  font-family $font-family, sans-serif
+  -moz-osx-font-smoothing grayscale
+  -webkit-font-smoothing antialiased
+  text-rendering: optimizeSpeed
+  color $colors.text
+  overflow-x hidden
 ```
 
-Да, это можно назвать «глобальными стилями-невидимками», что-то такое - они, с одной стороны - участвуют в правильном оформлении везде, но, при этом, «их не видно». Мы предоставляем глобальные константы гайдлайна и всю прочую мощь препроцессора всем компонентным системам - библиотеке и всем ее «читателям».
+И последние - нужно подключить все это к главному шаблону, в исходном виде это выглядит так:
+
+<code class="code--path">@/src/App.vue</code>
+
+```vue
+<template>
+  <div id="app">
+    <Test />
+  </div>
+</template>
+
+<script>
+import Test from './components/Test.vue';
+
+export default {
+  name: 'App',
+
+  components: {
+    Test,
+  },
+};
+</script>
+
+<style lang="stylus">
+@import "~/src/stylus/_stylebase.styl";
+</style>
+
+```
+
+Это можно назвать «глобальными стилями-невидимками», что-то такое - они, с одной стороны - участвуют в правильном оформлении везде, но, при этом, «их не видно». Мы предоставляем глобальные константы гайдлайна и всю прочую мощь препроцессора всем компонентным системам - библиотеке и всем ее «читателям».
 
 ### Mixins and placeholders
 
