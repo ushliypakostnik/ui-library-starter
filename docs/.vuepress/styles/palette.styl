@@ -32,9 +32,6 @@
 
 // Variables
 $gutter = 20px
-
-$accentColor = #818283
-$textColor = #25313c
 $borderColor = #eaecef
 $colorTextLight = #b1b1b1
 
@@ -45,6 +42,9 @@ body,
   max-height: unset
   overflow: auto
   letter-spacing normal
+
+body
+  color $colors.text
 
 #app
   padding-top 57px
@@ -88,7 +88,7 @@ strong
 
   > h1
     font-size 54px
-    color $accentColor
+    color $colors.primary
     margin-bottom $gutter * 2 !important
     padding-top $gutter * 8
     padding-bottom round($gutter * 2/3)
@@ -123,7 +123,7 @@ strong
   z-index 3000
 
   .site-name
-    color $accentColor
+    color $colors.primary
 
     +$mobile()
       font-size 11px
@@ -133,13 +133,20 @@ a.sidebar-link
   line-height 1.4
   font-weight normal
 
+  &:hover
+    color $colors.primary
+
+a.sidebar-link.active
+  color $colors.primary
+  border-left-color $colors.primary
+
 .sidebar-sub-header a.sidebar-link
   font-size 12px
 
 table
   thead
     tr th
-      background darken($borderColor, 12%)
+      background rgba($colors.text, $opacites.psy)
       color #fff
 
   tr:nth-child(2n)
@@ -151,6 +158,9 @@ table
 .custom-block
   margin-top 40px !important
   margin-bottom 40px !important
+
+.extra-class
+  background darken($colors.sea, 15%) !important
 
 
 // Custom classes

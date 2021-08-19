@@ -9,9 +9,9 @@
 //////////////////////////////////////////////////////
 $colors = {
   cat: #515bd4,
-  dog: #dd2a7b,
+  dog: #ffffff,
   bird: #fd5f00,
-  wood: #feda77,
+  wood: #fed564,
   stone: #8bc24c,
   sea: #13334c,
 }

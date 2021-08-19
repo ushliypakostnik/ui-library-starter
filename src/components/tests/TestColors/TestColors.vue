@@ -29,7 +29,7 @@ export default {
   > li
     @extend $flex--center // ~/src/stylus/utils/_placeholders.styl
     height 200px
-    color #ffffff // very bad - not palette color !!!
+    color $colors.stone
     $text("olga")
 
     +$gadgets()
@@ -49,6 +49,7 @@ export default {
     background $colors.wood
 
   &__5
+    color $colors.text !important
     background $colors.stone
 
   &__6
