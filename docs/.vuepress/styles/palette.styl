@@ -66,6 +66,9 @@ body
       margin-top $gutter !important
       margin-bottom $gutter !important
 
+  p
+    $text("natasha")
+
 strong
   font-weight 700
 
@@ -141,10 +144,14 @@ a.sidebar-link
 
 a.sidebar-link.active
   color $colors.primary
+  background rgba($colors.primary, ($opacites.psy / 2))
   border-left-color $colors.primary
 
 .sidebar-sub-header a.sidebar-link
   $text("nina")
+
+  &.active
+    background transparent
 
 table
   thead
