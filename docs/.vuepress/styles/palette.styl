@@ -1,39 +1,15 @@
-$accentColor = #818283
-$textColor = #25313C
-$borderColor = #eaecef
-$codeBgColor = #3a3a3a
-$badgeTip = #42b983
-$badgeWarning = darken(#ffe564, 35%)
-$badgeError = #DA596
-$colorTextLight = #b1b1b1
+@import "../../../src/stylus/_stylebase.styl"
+
+// Customization
+//////////////////////////////////////////////////////
+
+// Variables
 $gutter = 20px
 
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('/fonts/Ubuntu/Ubuntu-Regular.eot');
-  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
-    url('/fonts/Ubuntu/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/Ubuntu/Ubuntu-Regular.woff2') format('woff2'),
-    url('/fonts/Ubuntu/Ubuntu-Regular.woff') format('woff'),
-    url('/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Ubuntu';
-  src: url('/fonts/Ubuntu/Ubuntu-Bold.eot');
-  src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
-    url('/fonts/Ubuntu/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/Ubuntu/Ubuntu-Bold.woff2') format('woff2'),
-    url('/fonts/Ubuntu/Ubuntu-Bold.woff') format('woff'),
-    url('/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: bold;
-}
-
-body
-  font-family 'Ubuntu'
+$accentColor = #818283
+$textColor = #25313c
+$borderColor = #eaecef
+$colorTextLight = #b1b1b1
 
 html,
 body,
@@ -50,12 +26,33 @@ body,
   height 100%
   overflow-y auto
 
-ul,
-p
-  margin-bottom $gutter * 1.5
+.page
+  overflow-x hidden
+
+  ul,
+  p
+    margin-top $gutter * 1.5 !important
+    margin-bottom $gutter * 1.5 !important
+
+    +$gadgets()
+      margin-top $gutter !important
+      margin-bottom $gutter !important
 
 strong
   font-weight 700
+
+.theme-default-content:not(.custom)
+  +$desktop()
+    padding-left $wrapper.gutter--desktop
+    padding-right $wrapper.gutter--desktop
+
+  +$tablet()
+    padding-left $wrapper.gutter--tablet
+    padding-right $wrapper.gutter--tablet
+
+  +$mobile()
+    padding-left $wrapper.gutter--mobile
+    padding-right $wrapper.gutter--mobile
 
 .theme-default-content:not(.custom),
 .page-nav
@@ -68,6 +65,10 @@ strong
     padding-top $gutter * 8
     padding-bottom round($gutter * 2/3)
 
+    +$gadgets()
+      padding-top $gutter * 4
+      font-size 32px
+
   > h2
     color $colorTextLight
     font-size 32px
@@ -75,10 +76,17 @@ strong
     margin-bottom $gutter * 1.5
     padding-bottom round($gutter * 2/3)
 
+    +$gadgets()
+      padding-top $gutter * 4
+      font-size 28px
+
   > h3
     font-size 28px
     padding-top $gutter * 4
     padding-bottom $gutter * 0.75
+
+    +$gadgets()
+      font-size 24px
 
   > h4
     margin-bottom ($gutter / 2)
@@ -88,6 +96,9 @@ strong
 
   .site-name
     color $accentColor
+
+    +$mobile()
+      font-size 11px
 
 .page
   z-index 1000
@@ -138,7 +149,7 @@ table
   padding 0 !important
 
 a.sidebar-link
-  font-size 0.95em
+  font-size 16px
   line-height 1.4
   font-weight normal
 
@@ -148,3 +159,11 @@ a.sidebar-link
 .custom-block
   margin-top 40px !important
   margin-bottom 40px !important
+
+
+// Custom classes
+//////////////////////////////////////////////////////
+
+.code--path
+  +$gadgets()
+    font-size 9px !important

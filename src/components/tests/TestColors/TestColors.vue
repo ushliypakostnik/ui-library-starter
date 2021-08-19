@@ -23,11 +23,18 @@ export default {
   display grid
   grid-template-columns 1fr 1fr 1fr
 
+  +$gadgets()
+    display block
+
   > li
     @extend $flex--center // ~/src/stylus/utils/_placeholders.styl
-    height 300px
+    height 250px
     color #ffffff // very bad - not palette color !!!
     $text("olga")
+
+    +$gadgets()
+      height 120px
+      $text("anna")
 
   &__1
     background $colors.cat

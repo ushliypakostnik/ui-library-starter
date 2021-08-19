@@ -36,16 +36,16 @@ A short description, if required.
 
 ## Source code
 
-<code> ~/src/stylus/utils/_variables.styl</code>
+<code class="code--path">~/src/stylus/utils/_variables.styl</code>
 
 ```stylus
 $var--global = #ff0000
 ```
 
-<code>@/src/components/tests/Test/Test.vue</code>
+<code class="code--path">@/src/components/tests/Test/Test.vue</code>
 
 <<< @/src/components/tests/Test/Test.vue
 
-<code>@/src/components/tests/Test2/Test2.vue</code>
+<code class="code--path">@/src/components/tests/Test2/Test2.vue</code>
 
 <<< @/src/components/tests/Test2/Test2.vue

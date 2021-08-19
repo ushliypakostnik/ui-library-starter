@@ -2,7 +2,7 @@
 
 Абстрагируйте все цвета из гайдлайна в короткие имена-маркеры.
 
-<code>~/src/stylus/utils/_variables.styl</code>
+<code class="code--path">~/src/stylus/utils/_variables.styl</code>
 
 ```stylus
 // Palette
@@ -31,6 +31,6 @@ $colors["placeholder"] = rgba($colors.sea, 0.6)
 
 <TestColors />
 
-<code>@/src/components/tests/TestColors/TestColors.vue</code>
+<code class="code--path">@/src/components/tests/TestColors/TestColors.vue</code>
 
 <<< @/src/components/tests/TestColors/TestColors.vue

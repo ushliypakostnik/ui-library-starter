@@ -1,6 +1,6 @@
 # Others
 
-<code>~/src/stylus/utils/_variables.styl</code>
+<code class="code--path">~/src/stylus/utils/_variables.styl</code>
 
 ```stylus
 // Others from guide
@@ -28,7 +28,7 @@ $effects = {
 
 Можно получить из этого миксины для еще более лаконичного синтаксиса:
 
-<code>~/src/stylus/utils/_mixins.styl</code>
+<code class="code--path">~/src/stylus/utils/_mixins.styl</code>
 
 ```stylus
 // Opacity
@@ -78,7 +78,9 @@ $border-radius($name)
 
 ### Анимации
 
-Единственные глобальные стилевые классы которые при строгом подходе разрешено использовать это анимации. Вы можете добавлять их в специальном файле стилевой базы <code>~/src/stylus/core/_animation.styl</code>: 
+Единственные глобально компилируемые стилевые классы которые при строгом подходе разрешено использовать - для анимаций Vue. Вы можете добавлять их после соответсвующих <code>@keyframes</code> в специальном файле стилевой базы:
+
+<code class="code--path">~/src/stylus/core/_animation.styl</code> 
 
 <<< @/src/stylus/core/_animations.styl
 
