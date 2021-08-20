@@ -12,4 +12,4 @@
 
 <code class="code--path">@/src/components/tests/TestTypography/TestTypography.vue</code>
 
-<<< @/src/components/tests/TestTypography/TestTypography.vue
+<<< @/src/components/Tests/TestTypography/TestTypography.vue

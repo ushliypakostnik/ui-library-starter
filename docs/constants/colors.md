@@ -19,7 +19,7 @@ $colors = {
 $colors["text"] = $colors.sea
 $colors["placeholder"] = rgba($colors.sea, 0.6)
 $colors["primary"] = $colors.cat
-$colors["secondary"] = $colors.stone
+$colors["secondary"] = $colors.dog
 ```
 
 В любом месте кода препроцессора или секции стилей SFC (при условии импорта стилевой базы) библиотеки или дочерних проектов вы можете передавать правильные цвета:
@@ -35,4 +35,4 @@ $colors["secondary"] = $colors.stone
 
 <code class="code--path">@/src/components/tests/TestColors/TestColors.vue</code>
 
-<<< @/src/components/tests/TestColors/TestColors.vue
+<<< @/src/components/Tests/TestColors/TestColors.vue

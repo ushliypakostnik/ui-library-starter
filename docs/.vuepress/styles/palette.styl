@@ -4,36 +4,33 @@
 //////////////////////////////////////////////////////
 
 @font-face {
-  font-family: 'Ubuntu';
-  src: url('/fonts/Ubuntu/Ubuntu-Regular.eot');
-  src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
-    url('/fonts/Ubuntu/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/Ubuntu/Ubuntu-Regular.woff2') format('woff2'),
-    url('/fonts/Ubuntu/Ubuntu-Regular.woff') format('woff'),
-    url('/fonts/Ubuntu/Ubuntu-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: $font-family;
+  src: url("/fonts/Ubuntu/Ubuntu-Regular.eot");
+  src: local("Ubuntu Regular"), local("Ubuntu-Regular"),
+    url("/fonts/Ubuntu/Ubuntu-Regular.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Ubuntu/Ubuntu-Regular.woff2") format("woff2"),
+    url("/fonts/Ubuntu/Ubuntu-Regular.woff") format("woff"),
+    url("/fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: $font-weight.regular;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Ubuntu';
-  src: url('/fonts/Ubuntu/Ubuntu-Bold.eot');
-  src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
-    url('/fonts/Ubuntu/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/Ubuntu/Ubuntu-Bold.woff2') format('woff2'),
-    url('/fonts/Ubuntu/Ubuntu-Bold.woff') format('woff'),
-    url('/fonts/Ubuntu/Ubuntu-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: bold;
+  font-family: $font-family;
+  src: url("/fonts/Ubuntu/Ubuntu-Bold.eot");
+  src: local("Ubuntu Bold"), local("Ubuntu-Bold"),
+    url("/fonts/Ubuntu/Ubuntu-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/Ubuntu/Ubuntu-Bold.woff2") format("woff2"),
+    url("/fonts/Ubuntu/Ubuntu-Bold.woff") format("woff"),
+    url("/fonts/Ubuntu/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: $font-weight.bold;
+  font-style: normal;
 }
 
 // Customization
 //////////////////////////////////////////////////////
 
-// Variables
 $gutter = 20px
-$borderColor = #eaecef
-$colorTextLight = #b1b1b1
 
 html,
 body,
@@ -118,14 +115,16 @@ strong
     +$gadgets()
       padding-top $gutter * 4
       font-size 28px
-      $text("maria")
+      $text("katya")
 
   > h3
     $text("maria")
-    padding-top $gutter * 4
-    padding-bottom $gutter * 0.75
+    padding-top $gutter * 5
+    padding-bottom $gutter * 0.5
 
     +$gadgets()
+      padding-top $gutter * 4
+      padding-bottom $gutter * 0.25
       $text("katya")
 
   > h4
@@ -220,10 +219,14 @@ table
 footer.page-edit
   display none
 
-
 // Custom classes for markdown
 //////////////////////////////////////////////////////
 
 .code--path
+  white-space nowrap
+
   +$gadgets()
     font-size 9px !important
+
+.code--nowrap
+  white-space nowrap

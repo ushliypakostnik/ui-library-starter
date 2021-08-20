@@ -1,9 +1,6 @@
 // Tests
-export { default as Test } from './tests/Test';
-export { default as Test2 } from './tests/Test2';
-export { default as TestColors } from './tests/TestColors';
-export { default as TestTypography } from './tests/TestTypography';
-export { default as TestBreakpoints } from './tests/TestBreakpoints';
+export { default as TestColors } from './Tests/TestColors';
+export { default as TestBreakpoints } from './Tests/TestBreakpoints';
+export { default as TestTypography } from './Tests/TestTypography';
 
-// Elements
-export { default as Link } from './elements/Link';
+export { default as Link } from './Link';

@@ -1,7 +1,7 @@
 module.exports = {
   locales: {
     '/': {
-      lang: 'ru',
+      lang: 'en-US',
       title: 'UI Library Starter',
       description: 'Vue Component UI Library Starter',
     },
@@ -9,7 +9,6 @@ module.exports = {
 
   themeConfig: {
     repoLabel: 'GitHub repo',
-    // git repo here... gitlab, github
     repo: 'https://github.com/ushliypakostnik/ui-library-starter.git',
     docsDir: 'docs',
     search: false,
@@ -30,6 +29,7 @@ module.exports = {
             children: [
               '/',
               '/start',
+              'structure',
               '/links',
             ],
           },
@@ -62,17 +62,12 @@ module.exports = {
             title: `Components`,
             children: [
               {
-                title: `Test`,
-                path: '/components/test',
-              },
-              {
                 title: `Link`,
                 path: '/components/link',
               },
             ],
           },
         ],
-        sidebarDepth: 5,
       },
     },
   },
