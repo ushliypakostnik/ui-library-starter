@@ -6,20 +6,26 @@
 
 ### Project setup
 ```
-npm install
+$ npm install
 ```
 
 ### Development documentation
 ```
-npm run docs:dev
+$ npm run docs:dev
 ```
 
 ### Build documentation
 ```
-npm run docs:build
+$ npm run docs:build
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+$ npm run build
+```
+
+### Publish to NPM
+```
+$ npm version patch
+$ npm publish
 ```
