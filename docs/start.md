@@ -4,7 +4,7 @@
 
 Скачайте код [ui-library-starter](https://github.com/ushliypakostnik/ui-library-starter) и оформите его в отдельный репозиторий. При выборе имени для нового репозитория необходимо сразу убедиться в том, что оно не занято на [npmjs.com](https://www.npmjs.com/). Пусть это будет <code class="code--nowrap">ui-library-starter-test</code>.
 
-Или, в случае, если вы не планируете менять стиль проекта под свои собственные задачи, но, собираетесь внести вклад в его развитие, например, предложив еще какие-то важные компоненты - сделайте форк, конечно же. Дальнейшие иструкции относятся к первому случаю - пилим свежую либу с кастомным стилем под конкретные задачи - в этом случае многие могут заготеть удалить почти все компоненты, чтобы не выполнять лишнюю кастомизацию. 
+Или, в случае, если вы не планируете менять стиль проекта под свои собственные задачи, но, собираетесь внести вклад в его развитие, например, предложив еще какие-то важные компоненты - сделайте форк, конечно же. Дальнейшие иструкции относятся к первому случаю - пилим свежую либу с кастомным стилем под конкретные задачи - в этом случае многие могут заготеть удалить почти все компоненты, чтобы не выполнять лишнюю кастомизацию.
 
 ```
 $ npm install
@@ -35,7 +35,7 @@ $ npm install
   "jsdelivr": "dist/ui-library-starter-test.umd.min.js",
 
   "scripts": {
-    "build": "rimraf ./src/static && cp -r ./docs/.vuepress/public ./src/static && vue-cli-service build --target lib --name ui-library-starter-test src/main.js",
+    "build": "rimraf ./src/static && cp -r ./docs/.vuepress/public ./src/static && vue-cli-service build --target lib --name ui-library-starter-test src/main.js"
   },
 
   "author": "Levon Gambaryan",
@@ -49,7 +49,7 @@ $ npm install
   "bugs": {
     "url": "https://github.com/ushliypakostnik/ui-library-starter-test/issues"
   },
-  
+
   "keywords": []
 }
 ```
@@ -96,11 +96,11 @@ module.exports = {
 
 ### Connecting fonts
 
-Исходный проект библиотеки использует шрифт Ubuntu и вам необходимо подключить шрифт который используется в вашем руководстве по стилю. Предположим, это Open Sans и у вас есть его веб-фонт. 
+Исходный проект библиотеки использует шрифт Ubuntu и вам необходимо подключить шрифт который используется в вашем руководстве по стилю. Предположим, это Open Sans и у вас есть его веб-фонт.
 
 Перепишите имя шрифта и переменные начертаний если требуется в файле:
 
-<code class="code--path">~/src/stylus/utils/_typography.styl</code>
+<code class="code--path">~/src/stylus/utils/\_typography.styl</code>
 
 ```stylus
 $font-family = "Open Sans"
@@ -156,7 +156,6 @@ $font-weight = {
 Удалите директорию со старым шрифтом:
 
 <code class="code--path">@/docs/.vuepress/public/fonts/Ubuntu</code>
-
 
 ### Сleaning project
 
@@ -236,7 +235,9 @@ export default ComponentName;
       '.component-name__element--modifier1': prop1,
       '.component-name__element--modifier2': prop2,
     }"
-  />
+  >
+    This is test component!!!
+  </div>
 </template>
 
 <script>
@@ -258,19 +259,22 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "~/src/stylus/_stylebase.styl";
+
 .component-name
-  // Так доставляется адаптивность
+  background $colors.primary // test styles
+  // add adaptive
   +$mobile()
     display block
 
   &__element
-    $text("natasha") // так доставляется типографика
+    $text("natasha") // add typography
 
     &--modifier1
-      color $colors.primary // так доставляются цвета
+      color $colors.primary // add good color
 
     &--modifier2
-      color $colors.secondary // так доставляются цвета
+      color $colors.secondary
 </style>
 ```
 
@@ -302,10 +306,11 @@ This is new custom component.
 ## API
 
 ### Props
-| **Name** | **Type** | **Description** | **Default** |
-| :------- | :------- | :-------------- | ----------: |
-| **prop1** | Boolean | - | (required) |
-| **prop2** | Boolean | - | `false` |
+
+| **Name**  | **Type** | **Description** | **Default** |
+| :-------- | :------- | :-------------- | ----------: |
+| **prop1** | Boolean  | -               |  (required) |
+| **prop2** | Boolean  | -               |     `false` |
 
 ...
 ```
@@ -357,7 +362,7 @@ $ npm install ui-library-starter-test --save-dev
 
 Организация стилей дочерних проектов может или иметь подобную библиотеке структуру или любую другую (например, если вы внедряете бибилиотеку в старый проект). Единственное требование: первый импорт в основном файле - основного файла библиотеки. Второй - подключение шрифтов и стилизация <code class="code--nowrap">:root</code> и <code class="code--nowrap">body</code>:
 
-<code class="code--path">@/src/stylus/_stylebase.styl</code> дочернего проекта:
+<code class="code--path">@/src/stylus/\_stylebase.styl</code> дочернего проекта:
 
 ```stylus
 // Import UI Library stylebase
@@ -367,7 +372,7 @@ $ npm install ui-library-starter-test --save-dev
 @import "core/_base"; // normalize
 ```
 
-<code class="code--path">@/src/stylus/core/_base.styl</code>
+<code class="code--path">@/src/stylus/core/\_base.styl</code>
 
 ```stylus
 // Import UI Library fonts
@@ -419,8 +424,7 @@ body
 
 ```vue
 <template>
-  <div id="app">
-  </div>
+  <div id="app"></div>
 </template>
 
 <script>
@@ -432,7 +436,6 @@ export default {
 <style lang="stylus">
 @import "~/src/stylus/_stylebase.styl";
 </style>
-
 ```
 
 ## Updating in projects
