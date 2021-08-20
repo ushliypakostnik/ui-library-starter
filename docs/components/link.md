@@ -2,7 +2,7 @@
 
 ## Description
 
-Компонент предоставляет ссылку.
+The component provides a hypertext link.
 
 ## Connection
 
@@ -27,7 +27,7 @@
 
 ## Render
 
-<Link path="https://good-layout-book.netlify.app/">Это ссылка!!!</Link>
+<Link path="https://good-layout-book.netlify.app/">This is link!!!</Link>
 
 ## Source code
 

@@ -66,8 +66,16 @@ body
       margin-top $gutter !important
       margin-bottom $gutter !important
 
-  p
+  p:not([class*="inner"])
     $text("natasha")
+
+  a
+    text-decoration none !important
+    color $colors.primary
+
+.page a:hover
+  text-decoration none !important
+  border-bottom 2px solid $colors.primary
 
 strong
   font-weight 700
@@ -121,8 +129,8 @@ strong
       $text("katya")
 
   > h4
-    $text("alena")
     margin-bottom ($gutter / 2)
+    $text("alena")
 
 .navbar
   z-index 3000
@@ -199,7 +207,18 @@ table
 .page-nav a,
 .page-nav span,
 .nav-links
+  font-size 16px
   color $colors.primary
+
+.nav-link,
+.repo-link
+  &:hover
+    color $colors.primary !important
+    text-decoration none !important
+    border-bottom 2px solid $colors.primary
+
+footer.page-edit
+  display none
 
 
 // Custom classes for markdown
