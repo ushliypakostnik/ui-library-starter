@@ -354,7 +354,14 @@ $ npm publish
 
 ## Connecting to projects
 
-Вы можете либо использовать стартовый шаблон для новых проектов [ui-library-start](https://github.com/ushliypakostnik/ui-library-start), либо установить библиотеку как любой другой модуль в любой проект:
+Вы можете либо использовать стартовый шаблон для новых проектов [ui-library-start](https://github.com/ushliypakostnik/ui-library-start), тогда вам придется заменить библиотеку:
+
+```
+$ npm uninstall ui-library-starter --save-dev
+$ npm install ui-library-starter-test --save-dev
+```
+
+Либо установить библиотеку как любой другой модуль в любой другой проект:
 
 ```
 $ npm install ui-library-starter-test --save-dev
