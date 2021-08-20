@@ -389,7 +389,6 @@ $ npm install ui-library-starter-test --save-dev
   src: url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Regular.eot');
   src: local('Open Sans Regular'), local('OpenSans-Regular'),
     url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-    url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Regular.woff2') format('woff2'),
     url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Regular.woff') format('woff'),
     url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
   font-weight: $font-weight.regular;
@@ -401,7 +400,6 @@ $ npm install ui-library-starter-test --save-dev
   src: url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Bold.eot');
   src: local('Open Sans Bold'), local('OpenSans-Bold'),
     url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-    url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Bold.woff2') format('woff2'),
     url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Bold.woff') format('woff'),
     url('~ui-library-starter-test/src/static/fonts/OpenSans/OpenSans-Bold.ttf') format('truetype');
   font-weight: $font-weight.bold;
@@ -425,7 +423,7 @@ body
 
 Практически единственный повод что-то поменять в этом файле - крайне маловероятная ситуация - замена или добавление шрифта в гайдлайн. Предполагается что отредактировать пути шрифтов придется только один раз - при подключении библиотеки под определенный стиль.
 
-И последнее - нужно подключить все это к главному шаблону:
+Пужно подключить все это к главному шаблону:
 
 <code class="code--path">@/src/App.vue</code>
 
@@ -443,6 +441,27 @@ export default {
 <style lang="stylus">
 @import "~/src/stylus/_stylebase.styl";
 </style>
+```
+
+Поправить имя библиотеки в импорте в точку входа <code class="code--nowrap">@/src/main.js</code> если вы брали готовый репо или подключить:
+
+```js
+import ComponentLibrary from 'ui-library-starter-test';
+
+import 'ui-library-starter-test/dist/ui-library-starter-test.css';
+
+Vue.use(ComponentLibrary);
+```
+
+Поправить имя или добавить команду <code class="code--nowrap">$ npm run update</code> в <code class="code--nowrap">@/package.json</code>:
+
+```json
+{
+  "name": "ui-library-start-test",
+  "scripts": {
+    "update": "npm install ui-library-starter-test@latest"
+  },
+}
 ```
 
 ## Updating in projects
