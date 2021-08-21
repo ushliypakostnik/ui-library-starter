@@ -8,7 +8,7 @@
 │  │   │  └─ palette.styl
 │  │   ├─ config.js // configuration
 │  │   └─ enhanceApp.js // improvements - installation of library components
-│  ├─ components/ // component documentation folder
+│  ├─ components/ // components documentation folder
 │  │  ├─ link.md
 │  │  └─ ...
 │  ├─ constants/ // library documentation folder
