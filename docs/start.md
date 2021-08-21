@@ -436,6 +436,8 @@ export default {
 ```js
 import ComponentLibrary from 'ui-library-starter-test';
 import 'ui-library-starter-test/dist/ui-library-starter-test.css';
+
+Vue.use(ComponentLibrary);
 ```
 
 Исправьте имя или добавьте команду <code class="nowrap">update</code> в <code class="nowrap">@/package.json</code>:
