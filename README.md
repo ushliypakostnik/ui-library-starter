@@ -4,6 +4,8 @@
 
 [Deploy on Netlify](https://ui-library-starter.netlify.app/)
 
+![Colors](https://github.com/ushliypakostnik/ui-library-starter/blob/master/colors.jpg)
+
 ### Project setup
 ```
 $ npm install
