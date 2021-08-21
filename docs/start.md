@@ -216,7 +216,7 @@ export default ComponentName;
 
 И сам компонент:
 
-<code class="nowrap hidden--gadgets">@/src/components/ComponentName/ComponentName.vue</code>:
+<code class="nowrap hidden--gadgets">@/src/components/ComponentName/ComponentName.vue</code>
 
 ```vue
 <template>
