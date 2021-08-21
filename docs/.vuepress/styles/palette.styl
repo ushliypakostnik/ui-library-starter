@@ -107,15 +107,15 @@ strong
 
   > h2
     color rgba($colors.text, $opacites.psy)
-    padding-top $gutter * 5
-    margin-bottom $gutter * 1.5
+    padding-top $gutter * 6
+    margin-bottom $gutter
     padding-bottom round($gutter * 2/3)
     $text("anna")
 
     +$gadgets()
-      padding-top $gutter * 4
+      padding-top $gutter * 5
       font-size 28px
-      $text("katya")
+      $text("maria")
 
   > h3
     $text("maria")
@@ -219,14 +219,19 @@ table
 footer.page-edit
   display none
 
+.icon.outbound
+  transform translateY(-1px)
+  margin-left 3px
+
 // Custom classes for markdown
 //////////////////////////////////////////////////////
 
-.code--path
+// utilitty-css method ))))
+
+.nowrap
   white-space nowrap
 
+.hidden--gadgets
   +$gadgets()
-    font-size 9px !important
+    display none
 
-.code--nowrap
-  white-space nowrap

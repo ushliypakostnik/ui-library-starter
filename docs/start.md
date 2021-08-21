@@ -2,9 +2,9 @@
 
 ## Installation
 
-Скачайте код [ui-library-starter](https://github.com/ushliypakostnik/ui-library-starter) и оформите его в отдельный репозиторий. При выборе имени для нового репозитория необходимо сразу убедиться в том, что оно не занято на [npmjs.com](https://www.npmjs.com/). Пусть это будет <code class="code--nowrap">ui-library-starter-test</code>.
+Скачайте код <span class="nowrap">[ui-library-starter](https://github.com/ushliypakostnik/ui-library-starter)</span> и оформите его в отдельный репозиторий. При выборе имени для нового репозитория необходимо сразу убедиться в том, что оно не занято на <span class="nowrap">[npmjs.com](https://www.npmjs.com/)</span>. Пусть это будет <code class="nowrap">ui-library-starter-test</code>.
 
-Или, в случае, если вы не планируете менять стиль проекта под свои собственные задачи, но, собираетесь внести вклад в его развитие, например, предложив еще какие-то важные компоненты - сделайте форк, конечно же. Дальнейшие иструкции относятся к первому случаю - пилим свежую либу с кастомным стилем под конкретные задачи - в этом случае многие могут захотеть удалить почти все компоненты, чтобы не выполнять лишнюю кастомизацию.
+Или, в случае, если вы не планируете менять стиль проекта под свои собственные гайды, но, собираетесь поиграться или даже внести вклад в его развитие, например, предложив еще какие-то важные компоненты - сделайте форк, конечно же. Дальнейшие иструкции относятся к первому случаю - пилим свежую либу с кастомным стилем под конкретные задачи - в этом случае многие могут захотеть удалить почти все компоненты, чтобы не выполнять лишнюю кастомизацию, и всю эту экстравагантную документацию.
 
 ```
 $ npm install
@@ -14,7 +14,7 @@ $ npm install
 
 ### README.md
 
-Поправьте первую строчку в <code>@/README.md</code>
+Поправьте первую строчку в <code class="nowrap">@/README.md</code>:
 
 ```
 # Ui-library-starter test project
@@ -22,7 +22,7 @@ $ npm install
 
 ### package.json
 
-Далее в <code class="code--nowrap">@/package.json</code> вам необходимо крайне аккуратно переписать актуальной информацией следующие поля, ничего не пропустив:
+Далее в <code class="nowrap">@/package.json</code> вам необходимо крайне аккуратно переписать актуальной информацией следующие поля, ничего не пропустив:
 
 ```json
 {
@@ -54,13 +54,11 @@ $ npm install
 }
 ```
 
-Обратите внимание на имя проекта в конце длинной команды деплоя <code class="code--nowrap">build</code>!
+Обратите внимание на имя проекта в конце длинной команды деплоя <code class="nowrap">build</code>!
 
 ### Documentation config
 
-Перейдите к документации на VuePress и сконфигурируйте ее под себя:
-
-<code class="code--path">@/docs/.vuepress/config.js</code>
+Перейдите к документации на VuePress и сконфигурируйте ее под себя<code class="nowrap">@/docs/.vuepress/config.js</code>:
 
 ```js
 module.exports = {
@@ -84,8 +82,12 @@ module.exports = {
           {
             title: `Components`,
             children: [
-              // ... готовые компоненты библиотеки
+              // ... готовые компоненты библиотеки без Sandbox и папки /Tests с тестовыми 
             ],
+          },
+          {
+            title: `Sandbox`,
+            path: '/sandbox/sandbox',
           },
         ],
       },
@@ -96,11 +98,9 @@ module.exports = {
 
 ### Connecting fonts
 
-Исходный проект библиотеки использует шрифт Ubuntu и вам необходимо подключить шрифт который используется в вашем руководстве по стилю. Предположим, это Open Sans и у вас есть его веб-фонт.
+Исходный проект библиотеки использует шрифт Ubuntu и вам необходимо подключить шрифт который диктует ваше руководстве по стилю. Предположим, это Open Sans и у вас есть его веб-фонт.
 
-Перепишите имя шрифта и переменные начертаний если требуется в файле:
-
-<code class="code--path">~/src/stylus/utils/\_typography.styl</code>
+Перепишите имя шрифта и переменные начертаний если требуется в файле <code class="nowrap">~/src/stylus/utils/\_typography.styl</code>:
 
 ```stylus
 $font-family = "Open Sans"
@@ -111,13 +111,9 @@ $font-weight = {
 }
 ```
 
-Поместите папку с правильным шрифтом рядом с папкой <code class="code--nowrap">/Ubuntu</code> в:
+Поместите папку с правильным шрифтом рядом с папкой <code class="nowrap">/Ubuntu</code> в <code class="nowrap">@/docs/.vuepress/public/fonts/</code>.
 
-<code class="code--path">@/docs/.vuepress/public/fonts/</code>
-
-Пропишите правильные импорты и пути в файле кастомизации документации на VuePress:
-
-<code class="code--path">@/docs/.vuepress/styles/palette.styl/</code>
+Пропишите правильные импорты и пути в файле кастомизации документации на VuePress <code class="nowrap">@/docs/.vuepress/styles/palette.styl/</code>:
 
 ```stylus
 @import "../../../src/stylus/_stylebase.styl"
@@ -153,15 +149,13 @@ $font-weight = {
 ...
 ```
 
-Удалите директорию со старым шрифтом:
-
-<code class="code--path">@/docs/.vuepress/public/fonts/Ubuntu</code>
+Удалите директорию со старым шрифтом <code class="nowrap">@/docs/.vuepress/public/fonts/Ubuntu</code>.
 
 ### Сleaning project
 
 Если вы хотите получить полностью чистую документацию - произведите следующую очистку папок и файлов.
 
-Удалите все папки и файлы в <code class="code--nowrap">@/docs/</code> кроме директорий <code class="code--nowrap">@/docs/.vuepress</code>, <code class="code--nowrap">@/docs/components</code> и файла <code class="code--nowrap">@/docs/README.md</code> который нужно очистить:
+Удалите все папки и файлы в <code class="nowrap">@/docs/</code> кроме директорий <code class="nowrap">@/docs/.vuepress</code>, <code class="nowrap">@/docs/components</code> и файла <code class="nowrap">@/docs/README.md</code> который нужно очистить:
 
 ```
 # UI Library
@@ -169,13 +163,9 @@ $font-weight = {
 ...
 ```
 
-Удалите директорию:
+Удалите директорию <code class="nowrap">@/src/components/tests</code>.
 
-<code class="code--path">@/src/components/tests</code>
-
-Вычистите импорты тестовых компонент в индексном файле:
-
-<code class="code--path">@/src/components/index.js</code>
+Вычистите импорты тестовых компонент в индексном файле <code class="nowrap">@/src/components/index.js</code>:
 
 ```js
 // Tests - следующие три строчки удалить!!!
@@ -186,6 +176,9 @@ export { default as TestTypography } from './tests/TestTypography';
 // Elements
 ...
 ```
+
+Вы можете выбрать какие компоненты оставить или даже удалить их все, если уверенны в себе и не нуждаетесь в наглядных примерах под рукой. Вернитесь к конфигурации документации и отразите изменения в <code class="nowrap">@/docs/.vuepress/config.js</code>.
+
 
 ### Style setting
 
@@ -203,19 +196,17 @@ $ npm run docs:dev
 
 После того как стили библиотеки настроены вы можете добавлять свои специфические компоненты.
 
-Выберете имя для компонента в PascalCase стиле написания, предположим это <code class="code--nowrap">ComponentName</code>.
+Выберете имя для компонента в PascalCase стиле написания, предположим это <code class="nowrap">ComponentName</code>.
 
 ::: warning
-Некоторые имена могут оказаться зарезервированы VuePress. <code class="code--nowrap">Layout</code>, например. Самая достойная замена **Layout** видится как **View**.
+Некоторые имена могут оказаться зарезервированы VuePress. <code class="nowrap">Layout</code>, например. Самая достойная замена **Layout** видится как **View**.
 :::
 
-Добавьте директорию:
-
-<code class="code--path">@/src/components/ComponentName</code>
+Добавьте директорию <code class="nowrap">@/src/components/ComponentName</code>.
 
 Добавьте в нее индексный файл c импортом-экспортом:
 
-<code class="code--path">@/src/components/ComponentName/index.js</code>
+<code class="nowrap hidden--gadgets">@/src/components/ComponentName/index.js</code>
 
 ```js
 import ComponentName from './ComponentName.vue';
@@ -225,7 +216,7 @@ export default ComponentName;
 
 И сам компонент:
 
-<code class="code--path">@/src/components/ComponentName/ComponentName.vue</code>
+<code class="nowrap hidden--gadgets">@/src/components/ComponentName/ComponentName.vue</code>:
 
 ```vue
 <template>
@@ -278,17 +269,13 @@ export default {
 </style>
 ```
 
-Добавьте экспорт в индексный файл библиотеки:
-
-<code class="code--path">@/src/components/index.js</code>
+Добавьте экспорт в индексный файл библиотеки <code class="nowrap">@/src/components/index.js</code>:
 
 ```js
 export { default as ComponentName } from './ComponentName';
 ```
 
-Добавьте документацию компонента в файл:
-
-<code class="code--path">@/docs/components/component-name.md</code>
+Добавьте документацию компонента в файл <code class="nowrap">@/docs/components/component-name.md</code>:
 
 ```markdown
 # ComponentName
@@ -317,9 +304,7 @@ This is new custom component.
 
 И далее - рендер-тест и исходный код по аналогии с другими файлами.
 
-Добавьте компонент в конфигурацию VuePress:
-
-<code class="code--path">@/docs/.vuepress/config.js</code>
+Добавьте компонент в конфигурацию VuePress <code class="nowrap">@/docs/.vuepress/config.js</code>:
 
 ```js
 module.exports = {
@@ -343,18 +328,23 @@ module.exports = {
 };
 ```
 
+## Use the sandbox
+
+Используй специальный компонент <code class="nowrap">@/src/components/Sandbox/Sandbox.vue</code> и роут документации <code class="nowrap">Sandbox</code> как экспериментальную площадку и холст для создания новых компонент и взаимодействия между ними.  Но, очевидно, некоторые компоненты, такие как, например, лейаут - удобнее создавать непосредственно в проекте и уже после этого переносить в библиотеку.
+
 ## Library publishing
 
-Зарегистрируйтесь на [npmjs.com](https://www.npmjs.com/) и подтвердите регистрацию (дождитесь письма на почту).
+Зарегистрируйтесь на <span class="nowrap">[npmjs.com](https://www.npmjs.com/)</span> и подтвердите регистрацию (дождитесь письма на почту).
 
 ```
+$ npm run build
 $ npm version patch
 $ npm publish
 ```
 
 ## Connecting to projects
 
-Вы можете либо использовать стартовый шаблон для новых проектов [ui-library-start](https://github.com/ushliypakostnik/ui-library-start), тогда вам придется заменить библиотеку:
+Вы можете либо использовать стартовый шаблон для новых проектов <span class="nowrap">[ui-library-start](https://github.com/ushliypakostnik/ui-library-start)</span>, тогда вам придется заменить библиотеку:
 
 ```
 $ npm uninstall ui-library-starter --save-dev
@@ -367,9 +357,9 @@ $ npm install ui-library-starter-test --save-dev
 $ npm install ui-library-starter-test --save-dev
 ```
 
-Организация стилей дочерних проектов может или иметь подобную библиотеке структуру или любую другую (например, если вы внедряете бибилиотеку в старый проект). Единственное требование: первый импорт в основном файле - основного файла библиотеки. Второй - подключение шрифтов и стилизация <code class="code--nowrap">:root</code> и <code class="code--nowrap">body</code>:
+Организация стилей дочерних проектов может или иметь подобную библиотеке структуру или любую другую (например, если вы внедряете бибилиотеку в старый проект). Единственное требование: первый импорт в основном файле - основного файла библиотеки. Второй - подключение шрифтов и стилизация <code class="nowrap">:root</code> и <code class="nowrap">body</code>.
 
-<code class="code--path">@/src/stylus/\_stylebase.styl</code> дочернего проекта:
+<code class="nowrap">@/src/stylus/\_stylebase.styl</code> проекта использующего библиотеку:
 
 ```stylus
 // Import UI Library stylebase
@@ -379,7 +369,7 @@ $ npm install ui-library-starter-test --save-dev
 @import "core/_base"; // normalize
 ```
 
-<code class="code--path">@/src/stylus/core/\_base.styl</code>
+<code class="nowrap">@/src/stylus/core/\_base.styl</code> проекта использующего библиотеку:
 
 ```stylus
 // Import UI Library fonts
@@ -423,9 +413,7 @@ body
 
 Практически единственный повод что-то поменять в этом файле - крайне маловероятная ситуация - замена или добавление шрифта в гайдлайн. Предполагается что отредактировать пути шрифтов придется только один раз - при подключении библиотеки под определенный стиль.
 
-Пужно подключить все это к главному шаблону:
-
-<code class="code--path">@/src/App.vue</code>
+Подключите все это к главному шаблону <code class="nowrap">@/src/App.vue</code>:
 
 ```vue
 <template>
@@ -443,17 +431,16 @@ export default {
 </style>
 ```
 
-Поправить имя библиотеки в импорте в точку входа <code class="code--nowrap">@/src/main.js</code> если вы брали готовый репо или подключить:
+Исправьте имя библиотеки в импорте в точку входа <code class="nowrap">@/src/main.js</code> если вы брали готовый репо или подключите:
 
 ```js
 import ComponentLibrary from 'ui-library-starter-test';
-
 import 'ui-library-starter-test/dist/ui-library-starter-test.css';
 
 Vue.use(ComponentLibrary);
 ```
 
-Поправить имя или добавить команду <code class="code--nowrap">$ npm run update</code> в <code class="code--nowrap">@/package.json</code>:
+Исправьте имя или добавьте команду <code class="nowrap">update</code> в <code class="nowrap">@/package.json</code>:
 
 ```json
 {

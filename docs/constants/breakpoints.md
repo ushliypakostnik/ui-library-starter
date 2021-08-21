@@ -2,7 +2,7 @@
 
 Переменные-брекпоинты лучше называть более интуитивно-понятно.
 
-<code class="code--path">~/src/stylus/utils/_variables.styl</code>
+<code class="nowrap">~/src/stylus/utils/_variables.styl</code>
 
 ```stylus
 // Breakpoints
@@ -17,10 +17,10 @@ $breakpoints["tablet--max"] = $breakpoints.desktop - 1
 ```
 
 ::: warning
-Основные точки перехода: в стилевой базе препроцессора в <code class="code--nowrap">px</code> и в констанстах скриптов библиотеки в <code class="code--nowrap">Number</code> - должны соответствовать друг-другу.
+Основные точки перехода: в стилевой базе препроцессора в <code class="nowrap">px</code> и в констанстах скриптов библиотеки в <code class="nowrap">Number</code> - должны соответствовать друг-другу.
 :::
 
-<code class="code--path">@/src/utils/сonstants.js</code>
+<code class="nowrap">@/src/utils/сonstants.js</code>
 
 ```js
 // Design constants
@@ -68,7 +68,7 @@ $mobile()
 Использование в любом блоке стилей SFC.
 
 ::: tip
-В строгой традиции запрещается использование любых глобальных классов со стилями, за исключением анимаций для Vue и вынужденных кастомизаций действительно необходимых сторонних модулей где «классический ад с <code class="code--nowrap">!important</code>»))). Мы стараемся минимизировать количество зависимостей и «точечно» закрываем самые «дорогие», неподъемные по ресурсам проблемные места.
+В строгой традиции запрещается использование любых глобальных классов со стилями, за исключением анимаций для Vue и вынужденных кастомизаций действительно необходимых сторонних модулей где «классический ад с <code class="nowrap">!important</code>»))). Мы стараемся минимизировать количество зависимостей и «точечно» закрываем самые «дорогие», неподъемные по ресурсам проблемные места.
 :::
 
 ```stylus
@@ -86,13 +86,13 @@ $mobile()
 
 Точки перехода скриптов обрабатываются специальным модулем-помощником для экрана через matchMedia:
 
-<code class="code--path">@/src/utils/screen-helper.js</code>
+<code class="nowrap">@/src/utils/screen-helper.js</code>
 
 <<< @/src/utils/screen-helper.js
 
 Для того чтобы компоненты могли всегда верно определять типоразмер устройства предоставлена общая функциональность обновлящая переменные в событии ресайза. Этот миксин может быть невероятно полезен и на этапе конечной сборки адаптивных видов - в дочерних проектах. 
 
-<code class="code--path">@/src/mixins/resize.js</code>
+<code class="nowrap">@/src/mixins/resize.js</code>
 
 <<< @/src/mixins/resize.js
 
@@ -131,6 +131,8 @@ export default {
 ```
 
 Тестовый компонент:
+
+<code class="nowrap hidden--gadgets">@/src/components/Tests/TestBreakpoints/TestBreakpoints.vue</code>
 
 <TestBreakpoints />
 

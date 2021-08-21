@@ -2,7 +2,7 @@
 
 Абстрагируйте все цвета из гайдлайна в короткие имена-маркеры.
 
-<code class="code--path">~/src/stylus/utils/_variables.styl</code>
+<code class="nowrap">~/src/stylus/utils/_variables.styl</code>
 
 ```stylus
 // Palette
@@ -33,6 +33,6 @@ $colors["secondary"] = $colors.dog
 
 <TestColors />
 
-<code class="code--path">@/src/components/tests/TestColors/TestColors.vue</code>
+<code class="nowrap hidden--gadgets">@/src/components/tests/TestColors/TestColors.vue</code>
 
 <<< @/src/components/Tests/TestColors/TestColors.vue

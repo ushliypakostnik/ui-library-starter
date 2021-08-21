@@ -67,6 +67,10 @@ module.exports = {
               },
             ],
           },
+          {
+            title: `Sandbox`,
+            path: '/sandbox/sandbox',
+          },
         ],
       },
     },

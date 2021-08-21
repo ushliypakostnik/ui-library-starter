@@ -1,6 +1,6 @@
 # Useful links
 
-[Vue.js: Рекомендации](https://ru.vuejs.org/v2/style-guide/index.html)
+[Vue.js: Style Guide](https://vuejs.org/v2/style-guide/index.html)
 
 [VuePress](https://vuepress.vuejs.org/)
 

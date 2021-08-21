@@ -31,6 +31,6 @@ The component provides a hypertext link.
 
 ## Source code
 
-<code class="code--path">@/src/components/Link/Link.vue</code>
+<code class="nowrap">@/src/components/Link/Link.vue</code>
 
 <<< @/src/components/Link/Link.vue
