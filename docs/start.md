@@ -431,13 +431,11 @@ export default {
 </style>
 ```
 
-Исправьте имя библиотеки в импорте в точку входа <code class="nowrap">@/src/main.js</code> если вы брали готовый репо или подключите:
+Исправьте имя библиотеки в импортах в точку входа <code class="nowrap">@/src/main.js</code> если вы брали готовый репо или подключите:
 
 ```js
 import ComponentLibrary from 'ui-library-starter-test';
 import 'ui-library-starter-test/dist/ui-library-starter-test.css';
-
-Vue.use(ComponentLibrary);
 ```
 
 Исправьте имя или добавьте команду <code class="nowrap">update</code> в <code class="nowrap">@/package.json</code>:
