@@ -12,22 +12,22 @@ The component provides a hypertext link.
 </template>
 ```
 
+## Render
+
+<Link path="https://good-layout-book.netlify.app/">This is link!!!</Link>
+
 ## API
 
 ### Props
 | **Name** | **Type** | **Description** | **Default** |
 | :------- | :------- | :-------------- | ----------: |
-| **path** | String(required) | Link url | - |
+| **path** | String| Link url | **required** |
 | **target** | String | Target attr | `'_blank'` |
 
 ### Slots
 | **Name** | **Description** |
 | :------- | :-------------- |
 | default | Link text |
-
-## Render
-
-<Link path="https://good-layout-book.netlify.app/">This is link!!!</Link>
 
 ## Source code
 

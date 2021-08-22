@@ -1,6 +1,6 @@
 # _stylebase.styl
 
-Глобальный медиатор стилей собирает некомпилируемые <code class="nowrap">/utils</code>, комплируемые <code class="nowrap">/core</code> сущности и необходимые глобально кастомизации используемых сторонних модулей <code class="nowrap">/libs</code> (но, те которые позволяют это сделать без <code class="nowrap">scoped</code> - стоит разместить в SFC-обертках).
+Глобальный медиатор стилей собирает не компилируемые <code class="nowrap">/utils</code>, компилируемые <code class="nowrap">/core</code> сущности и необходимые глобально кастомизации используемых сторонних модулей <code class="nowrap">/libs</code> (но, те которые позволяют это сделать без <code class="nowrap">scoped</code> - стоит разместить в SFC-обертках).
 
 <code class="nowrap">@/src/stylus/_stylebase.styl</code> библиотеки:
 

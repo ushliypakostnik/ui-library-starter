@@ -62,6 +62,14 @@ module.exports = {
             title: `Components`,
             children: [
               {
+                title: `Button`,
+                path: '/components/button',
+              },
+              {
+                title: `Icon`,
+                path: '/components/icon',
+              },
+              {
                 title: `Link`,
                 path: '/components/link',
               },

@@ -8,7 +8,7 @@
 
 <<< @/src/stylus/utils/_typography.styl
 
-Тестовый демо-компонент:
+Test component:
 
 <code class="nowrap hidden--gadgets">@/src/components/tests/TestTypography/TestTypography.vue</code>
 

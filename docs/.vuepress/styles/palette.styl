@@ -223,6 +223,12 @@ footer.page-edit
   transform translateY(-1px)
   margin-left 3px
 
+.sidebar-button
+  transform translateX(5px) translateY(10px)
+
+  .icon
+    transform translateX(-10px) translateY(-10px)
+
 // Custom classes for markdown
 //////////////////////////////////////////////////////
 
@@ -234,4 +240,19 @@ footer.page-edit
 .hidden--gadgets
   +$gadgets()
     display none
+
+.docs-icon-test
+  display flex
+  align-items center
+  margin-bottom 20px
+  margin-right 40px
+
+  &__wrapper
+    display inline-block
+
+  &__text
+    margin-left 20px
+
+.place
+  background lighten($colors.secondary, 80%)
 
