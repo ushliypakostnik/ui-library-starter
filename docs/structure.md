@@ -51,7 +51,7 @@
 │  │  │  └─ _variables.styl
 │  │  └─ _stylebase.styl // main file of stylus 
 │  ├─ utils/ // scripts
-│  │  ├─ constants.js
+│  │  ├─ constants.js // javascript constants
 │  │  ├─ screen-helper.js // adaptive viewport
 │  │  └─ ...
 │  └─ main.js // library connection
