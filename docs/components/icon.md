@@ -2,7 +2,7 @@
 
 ## Description
 
-The component provides a icon. Now the icons are drawn for the size 24 by 24 px.
+The component provides a icon. Now the all icons are drawn for the size 24 by 24 px.
 
 ## Connection
 

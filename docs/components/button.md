@@ -2,9 +2,11 @@
 
 ## Description
 
-The component provides a button. Use the <strong> .native </strong> modifier to call a method on a component.
+The component provides a button.
 
 ## Connection
+
+Use the <strong>.native</strong> modifier to call a method on a component.
 
 ```vue
 <template>

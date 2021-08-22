@@ -25,9 +25,9 @@
 │  └─ structure.md // structure
 ├─ src/ // source folder
 │  ├─ components/
-│  │  ├─ Link
+│  │  ├─ Icon
 │  │  │  ├─ index.js
-│  │  │  └─ Link.vue
+│  │  │  └─ Icon.vue
 │  │  ├─ Sandbox
 │  │  │  ├─ index.js
 │  │  │  └─ Sandbox.vue
