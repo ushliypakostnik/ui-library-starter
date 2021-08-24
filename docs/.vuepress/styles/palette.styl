@@ -229,7 +229,8 @@ footer.page-edit
   .icon
     transform translateX(-10px) translateY(-10px)
 
-// Custom classes for markdown
+
+// Custom classes for markdown and render tests
 //////////////////////////////////////////////////////
 
 // utilitty-css method ))))
@@ -241,18 +242,52 @@ footer.page-edit
   +$gadgets()
     display none
 
-.docs-icon-test
+.block
+  @extend $flex--center
+  height 100%
+  color $colors.stone
+  background lighten($colors.text, 90%)
+  $text("maria")
+
+  &--small
+    +$tablet()
+      $text("alena")
+
+.place
+  background lighten($colors.secondary, 75%)
+
+.test-name
+  margin-bottom 10px
+  $text("maria")
+
+.test-block
+  margin-bottom 20px
+
+// Icon
+.icons-test
+  > div
+    display inline-block
+
+.icon-test
   display flex
   align-items center
   margin-bottom 20px
   margin-right 40px
 
-  &__wrapper
-    display inline-block
-
   &__text
     margin-left 20px
 
-.place
-  background lighten($colors.secondary, 80%)
+// Button
+.buttons-test
+  > div:not([class*="buttons-test__wide"])
+    margin-bottom 10px
 
+  &__wide
+    padding-top 10px
+
+// Wrapper
+.wrapper-test
+  height 300px
+
+  > *
+    height 100px

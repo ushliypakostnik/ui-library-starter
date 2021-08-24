@@ -10,15 +10,17 @@ Use the <strong>.native</strong> modifier to call a method on a component.
 
 ```vue
 <template>
-  <Button @click.native="click">>primary</Button>
-  <Button skin="secondary">secondary</Button>
-
-  <Button size="large">large</Button>
-  <Button skin="secondary" size="small">small</Button>
-
-  <Button disabled>disabled</Button>
-
-  <Button skin="secondary" wide>wide</Button>
+  <section>
+    <Button @click.native="click">>skin="primary"</Button>
+    <Button skin="secondary">skin="secondary"</Button>
+  
+    <Button size="large">size="large"</Button>
+    <Button size="small">size="small"</Button>
+  
+    <Button disabled>disabled</Button>
+  
+    <Button skin="secondary" wide>skin="secondary" wide</Button>
+  </section>
 </template>
 
 <script>
@@ -32,17 +34,38 @@ export default {
 
 ## Render
 
-<Button :style="`margin-bottom: 10px`">primary</Button>
+<div class="buttons-test">
+  <Button>skin="primary"</Button>
+ 
+  <Button skin="secondary">skin="secondary"</Button>
+  
+  <Button size="large">size="large"</Button>
+  
+  <Button size="small">size="small"</Button>
+  
+  <Button disabled>disabled</Button>
+  
+  <div class="buttons-test__wide"><Button skin="secondary" wide>skin="secondary" wide</Button></div>
+</div>
 
-<Button :style="`margin-bottom: 10px`" skin="secondary">secondary</Button>
 
-<Button :style="`margin-bottom: 10px`" size="large">large</Button>
+## Styles
 
-<Button :style="`margin-bottom: 10px`" skin="secondary" size="small">small</Button>
+<code class="nowrap">~/src/stylus/utils/_variables.styl</code>
 
-<Button :style="`margin-bottom: 10px`" disabled>disabled</Button>
+```stylus
+$buttons = {
+  height--large: 48px,
+  height--normal: 40px,
+  height--small: 24px,
 
-<div :style="`padding-top: 10px`"><Button skin="secondary" wide>wide</Button></div>
+  background--primary: $colors.primary,
+  background--secondary: $colors.secondary,
+
+  color--primary: $colors.stone,
+  color--secondary: $colors.stone,
+}
+```
 
 ## API
 

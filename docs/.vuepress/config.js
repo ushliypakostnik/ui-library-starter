@@ -66,12 +66,32 @@ module.exports = {
                 path: '/components/button',
               },
               {
+                title: `Grid`,
+                path: '/components/grid',
+              },
+              {
                 title: `Icon`,
                 path: '/components/icon',
               },
               {
+                title: `Input`,
+                path: '/components/input',
+              },
+              {
                 title: `Link`,
                 path: '/components/link',
+              },
+              {
+                title: `Wrapper`,
+                path: '/components/wrapper',
+              },
+              {
+                title: `controls.js`,
+                path: '/components/controls',
+              },
+              {
+                title: `inputs.js`,
+                path: '/components/inputs',
               },
             ],
           },

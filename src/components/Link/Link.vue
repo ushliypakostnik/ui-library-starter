@@ -26,12 +26,12 @@ export default {
 @import "~/src/stylus/_stylebase.styl";
 
 .link
-  cursor pointer
-  display inline
-  text-decoration none !important
   color $colors.primary
+  border-bottom 2px solid transparent
+  transition border $effects.duration
+  text-decoration none
 
-.link:hover
-  text-decoration none !important
-  border-bottom 2px solid $colors.primary
+  &:hover
+    border-bottom 2px solid $colors.primary
+    text-decoration none
 </style>

@@ -106,7 +106,7 @@ $mobile()
 </template>
 
 <script>
-import resize from '../../../../src/mixins/resize.js';
+import resize from '../../../src/mixins/resize.js';
 
 export default {
   name: 'ComponentName',

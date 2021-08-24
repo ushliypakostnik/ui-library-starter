@@ -1,3 +1,6 @@
+@import "./_mixins";
+@import "./_typography";
+
 // Project placeholders
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
@@ -10,6 +13,23 @@ $flex--center
   display flex
   align-items center
   justify-content center
+
+// Ellipsis to long string
+$lineOverflow
+  display block
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+
+// Защита для больших блоков текста, например в гридах
+$longLettersProtection
+  -ms-word-break break-all
+  word-break break-all
+  word-break break-word
+  -webkit-hyphens auto
+  -moz-hyphens auto
+  -ms-hyphens auto
+  hyphens auto
 
 
 // Elements
@@ -24,4 +44,58 @@ $button
   white-space nowrap
   outline none
   text-align center
-  transition background ($effects.duration * 3)
+  transition background $effects.duration
+
+
+// Forms
+
+$control__background($background)
+  background $background
+
+  &:hover
+    background lighten($background, $effects.amount)
+
+  &:active,
+  &:focus
+    background darken($background, $effects.amount)
+
+$control
+  width 100%
+  appearance none
+  -webkit-appearance inherit
+  border none
+  padding-left 16px
+  padding-right 16px
+  $border-radius("swimming")
+  $text("alena")
+  $control__background($inputs.background--default)
+
+$control__wrapper
+  position relative
+  width 100%
+
+  &--disabled
+    pointer-events none
+    cursor default
+    user-select none
+    $opacity("psy")
+
+  &--error
+    .input__control,
+    .textarea__control
+      color $colors.prestige
+      $control__background($inputs.background--error)
+
+    .vs__dropdown-toggle
+      $control__background($inputs.background--error)
+
+    .vs__selected
+      color $colors.bird
+
+$control__error
+  @extend $lineOverflow
+  position absolute
+  left 16px
+  max-width calc(100% - 32px)
+  color $colors.bird
+  $text("natasha")

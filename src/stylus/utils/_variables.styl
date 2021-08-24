@@ -20,7 +20,6 @@ $colors = {
 }
 // Dependencies colors
 $colors["text"] = $colors.sea
-$colors["placeholder"] = rgba($colors.sea, 0.6)
 $colors["primary"] = $colors.cat
 $colors["secondary"] = $colors.dog
 
@@ -51,8 +50,10 @@ $opacites = {
   funky: 0.75,
   rock: 0.66,
   psy: 0.45,
+  pop: 0.2,
   reggae: 0,
 }
+$colors["placeholder"] = rgba($colors.sea, $opacites.pop)
 
 $effects = {
   duration: 0.1s,
@@ -67,6 +68,8 @@ $wrapper = {
   gutter--desktop: 40px,
   gutter--tablet: 32px,
   gutter--mobile: 24px,
+
+  width--max: 1280px,
 }
 
 $grids = {
@@ -77,12 +80,10 @@ $grids = {
 
 $inputs = {
   height--input: 40px,
-  height--textarea: 140px,
+  height--textarea: 160px,
 
-  background--default: rgba($colors.wood, $opacites.psy),
-  background--hover: rgba($colors.wood, $opacites.psy),
-  background--active: rgba($colors.wood, $opacites.psy),
-  background--error: rgba($colors.dog, $opacites.psy),
+  background--default: rgba($colors.wood, $opacites.pop),
+  background--error: rgba($colors.bird, $opacites.pop),
 }
 
 $buttons = {

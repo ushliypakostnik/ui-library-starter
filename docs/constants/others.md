@@ -18,6 +18,7 @@ $opacites = {
   funky: 0.75,
   rock: 0.66,
   psy: 0.45,
+  pop: 0.2,
   reggae: 0,
 }
 
@@ -55,6 +56,8 @@ $opacity($name)
     opacity $opacites.rock // 0.66
   if $name == "psy"
     opacity $opacites.psy // 0.45
+  if $name == "pop"
+    opacity $opacites.pop // 0.2
   if $name == "reggae"
     opacity $opacites.reggae // 0
 ```
