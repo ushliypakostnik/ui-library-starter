@@ -444,7 +444,7 @@ export default {
 
     yearQuarters() {
       const quarters = [];
-      for (const [index, month] of this.yearMonths.entries()) {
+      for (const [index] of this.yearMonths.entries()) {
         if (index % 3 === 0) {
           const isQuarterAllowed = this.isRangeAllowed([
             startOfMonth(this.yearMonths[index].date),
@@ -1209,7 +1209,7 @@ export default {
     },
 
     values: {
-      handler: function (values) {
+      handler: function () {
         if (this.values.from && this.values.to) {
           this.$emit('select', {
             ...this.formatValues,
@@ -1298,6 +1298,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "~/src/stylus/_stylebase.styl";
+
 $width = 400px
 $range-color = rgba($colors.bird, $opacites.psy)
 

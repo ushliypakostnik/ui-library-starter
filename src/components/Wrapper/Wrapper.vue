@@ -11,6 +11,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "~/src/stylus/_stylebase.styl";
+
 .wrapper
   width 100%
   max-width $wrapper.width--max

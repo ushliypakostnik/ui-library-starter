@@ -9,7 +9,3 @@ export default {
   name: 'Sandbox',
 };
 </script>
-
-<style lang="stylus" scoped>
-@import "~/src/stylus/_stylebase.styl";
-</style>

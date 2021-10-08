@@ -18,6 +18,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "~/src/stylus/_stylebase.styl";
+
 // Common
 $grids-common
   display grid

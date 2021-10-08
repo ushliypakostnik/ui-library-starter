@@ -81,6 +81,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "~/src/stylus/_stylebase.styl";
+
 a.button
   display inline-block
 

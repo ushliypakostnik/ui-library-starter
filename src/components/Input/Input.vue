@@ -33,6 +33,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "~/src/stylus/_stylebase.styl";
+
 .input
   &__wrapper
     @extend $control__wrapper

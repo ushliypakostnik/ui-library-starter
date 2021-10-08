@@ -42,6 +42,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import "~/src/stylus/_stylebase.styl";
+
 @keyframes spinner
   0%
     opacity 1
