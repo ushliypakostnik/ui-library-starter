@@ -66,6 +66,10 @@ module.exports = {
                 path: '/components/button',
               },
               {
+                title: `Datepicker`,
+                path: '/components/datepicker',
+              },
+              {
                 title: `Grid`,
                 path: '/components/grid',
               },
@@ -80,6 +84,10 @@ module.exports = {
               {
                 title: `Link`,
                 path: '/components/link',
+              },
+              {
+                title: `Loader`,
+                path: '/components/loader',
               },
               {
                 title: `Wrapper`,

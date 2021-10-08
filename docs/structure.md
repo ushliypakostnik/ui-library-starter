@@ -44,8 +44,6 @@
 │  │  ├─ core
 │  │  │  ├─ _animations.styl // keyframes and Vue animationss classes
 │  │  │  └─ _base.styl // normalize
-│  │  ├─ libs
-│  │  │  └─ ...
 │  │  ├─ utils
 │  │  │  ├─ _mixins.styl
 │  │  │  ├─ _placeholders.styl

@@ -72,7 +72,7 @@ $buttons = {
 ### Props
 | **Name** | **Type** | **Description** | **Default** |
 | :------- | :------- | :-------------- | ----------: |
-| **link** | String, null| Is button a link, url | null |
+| **link** | String, null| Is button a link, url | `null` |
 | **skin** | String: `'primary'`, `'secondary'` | Button colors | `'primary'` |
 | **size** | String: `'normal'`, `'large'`, `'small'` | Button size | `'normal'` |
 | **type** | String | type attr | `'button'` |

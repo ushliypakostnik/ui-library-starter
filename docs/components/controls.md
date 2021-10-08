@@ -11,7 +11,7 @@ Mixin additional functionality for active controls.
 | **Name** | **Type**     | **Description**       | **Default** |
 | :------- | :----------- | :-------------------- | ----------: |
 | **value** | [String, Number] | Sync value | **required** |
-| **onClick** | Function | Callback on click | () => {} |
+| **onClick** | Function | Callback on click | `() => {}` |
 
 ### Events
 

@@ -14,8 +14,8 @@ Mixin additional functionality for inputs fields.
 | **placeholder** | [String, null] | placeholder | `null` |
 | **disabled** | Boolean | Is input disabled | `false` |
 | **error** | [String, null] | Is error, error message | `null` |
-| **onFocus** | Function | Callback on focus | () => {} |
-| **onBlur** | Function | Callback on blur | () => {} |
+| **onFocus** | Function | Callback on focus | `() => {}` |
+| **onBlur** | Function | Callback on blur | `() => {}` |
 
 ### Events
 
@@ -25,6 +25,6 @@ Mixin additional functionality for inputs fields.
 | **blur** | Emit on blur |
 | **input** | Emit on input |
 
-<code class="nowrap">@/src/mixins/inputs.js</code>
+<code classs="nowrap">@/src/mixins/inputs.js</code>
 
 <<< @/src/mixins/inputs.js
