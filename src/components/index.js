@@ -11,4 +11,6 @@ export { default as Icon } from './Icon';
 export { default as Input } from './Input';
 export { default as Link } from './Link';
 export { default as Loader } from './Loader';
+export { default as Select } from './Select';
+export { default as Textarea } from './Textarea';
 export { default as Wrapper } from './Wrapper';

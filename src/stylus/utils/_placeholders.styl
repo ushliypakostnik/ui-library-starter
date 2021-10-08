@@ -49,7 +49,7 @@ $button
 
 // Forms
 
-$control__background($background)
+$input__background($background)
   background $background
 
   &:hover
@@ -59,43 +59,49 @@ $control__background($background)
   &:focus
     background darken($background, $effects.amount)
 
-$control
+$input
   width 100%
   appearance none
   -webkit-appearance inherit
   border none
-  padding-left 16px
-  padding-right 16px
+  padding-left $inputs.padding
+  padding-right $inputs.padding
   $border-radius("swimming")
   $text("alena")
-  $control__background($inputs.background--default)
+  $input__background($inputs.background--default)
 
-$control__wrapper
-  position relative
-  width 100%
+  &__wrapper
+    position relative
+    width 100%
+    padding-bottom 32px
 
-  &--disabled
-    pointer-events none
-    cursor default
-    user-select none
-    $opacity("psy")
+    &--disabled
+      pointer-events none
+      cursor default
+      user-select none
+      $opacity("psy")
 
-  &--error
-    .input__control,
-    .textarea__control
-      color $colors.prestige
-      $control__background($inputs.background--error)
+    &--error
+      .input__control,
+      .textarea__control
+        color $colors.prestige
+        $input__background($inputs.background--error)
 
-    .vs__dropdown-toggle
-      $control__background($inputs.background--error)
+      .vs__dropdown-toggle
+        $input__background($inputs.background--error)
 
-    .vs__selected
-      color $colors.bird
+      .vs__selected
+        color $colors.bird
 
-$control__error
-  @extend $lineOverflow
-  position absolute
-  left 16px
-  max-width calc(100% - 32px)
-  color $colors.bird
-  $text("natasha")
+  &__error
+    @extend $lineOverflow
+    position absolute
+    left $inputs.padding
+    max-width calc(100% - 32px)
+    color $colors.bird
+    $text("natasha")
+
+
+// Shadows
+$shadow
+  box-shadow: 0 10px 32px $colors.shadows;

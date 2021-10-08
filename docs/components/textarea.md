@@ -1,26 +1,26 @@
-# Input
+# Textarea
 
 ## Description
 
-The component provides a simple input control.
+The component provides a simple textarea control.
 
 ## Connection
 
 ```vue
 <template>
   <section>
-    <Input :value.sync="input1" placeholder="Input placeholder text" />
+    <Textarea :value.sync="textarea1" placeholder="Textarea placeholder text" />
 
-    <Input
-      :value.sync="input2"
-      placeholder="Input placeholder text"
+    <Textarea
+      :value.sync="textarea2"
+      placeholder="Textarea placeholder text"
       error="Error text error text error text error text error text error text error text error text error text error text error text error text error text error text error text error text"
     />
 
-    <Input
+    <Textarea
       disabled
-      :value.sync="input3"
-      placeholder="Input placeholder text"
+      :value.sync="textarea3"
+      placeholder="Textarea placeholder text"
     />
   </section>
 </template>
@@ -29,9 +29,9 @@ The component provides a simple input control.
 export default {
   data() {
     return {
-      input1: '',
-      input2: '',
-      input3: '',
+      textarea1: '',
+      textarea2: '',
+      textarea3: '',
     };
   },
 };
@@ -40,11 +40,11 @@ export default {
 
 ## Render
 
-<Input :value="''" placeholder="Input placeholder text" />
+<Textarea :value="''" placeholder="Textarea placeholder text" />
 
-<Input :value="''" placeholder="Input placeholder text" error="Error text error text error text error text error text error text error text error text error text error text error text error text error text" />
+<Textarea :value="''" placeholder="Textarea placeholder text" error="Error text error text error text error text error text error text error text error text error text error text error text error text error text" />
 
-<Input :value="''" placeholder="Input placeholder text" disabled />
+<Textarea :value="''" placeholder="Textarea placeholder text" disabled />
 
 ## Styles
 
@@ -52,7 +52,7 @@ export default {
 
 ```stylus
 $inputs = {
-  height--input: 40px,
+  height--textarea: 200px,
 
   padding: 16px,
 
@@ -100,6 +100,6 @@ $input
 
 ## Source code
 
-<code class="nowrap">@/src/components/Input/Input.vue</code>
+<code class="nowrap">@/src/components/Textarea/Textarea.vue</code>
 
-<<< @/src/components/Input/Input.vue
+<<< @/src/components/Textarea/Textarea.vue

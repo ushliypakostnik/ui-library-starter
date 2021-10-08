@@ -90,6 +90,14 @@ module.exports = {
                 path: '/components/loader',
               },
               {
+                title: `Textarea`,
+                path: '/components/textarea',
+              },
+              {
+                title: `Select`,
+                path: '/components/select',
+              },
+              {
                 title: `Wrapper`,
                 path: '/components/wrapper',
               },

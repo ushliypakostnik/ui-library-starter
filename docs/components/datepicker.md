@@ -22,6 +22,16 @@ Component providing a classic datapicker with rotating qualities:
     @select="dateSelect"
   />
 </template>
+
+<script>
+export default {
+  methods: {
+    dateSelect(event) {
+      console.log(event);
+    },
+  },
+};
+</script>
 ```
 
 ## API
