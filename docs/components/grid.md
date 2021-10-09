@@ -4,15 +4,31 @@
 
 A component provides a grids by names.
 
+To transfer content, you can use the main default slot or multiple dynamic.
+
 ## Connection
 
 ```vue
 <template>
+  <!-- Default slot -->  
   <Grid name="rithm-for-two">
     <div>1</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
+  </Grid>
+
+  <!-- Dinamic slots -->
+  <Grid name="rhythm-for-three" :slots="3">
+    <template #slot--1>
+      1
+    </template>
+    <template #slot--2>
+      2
+    </template>
+    <template #slot--3>
+      3
+    </template>
   </Grid>
 </template>
 ```
@@ -110,6 +126,13 @@ $grids = {
 | **Name** | **Type** | **Description** | **Default** |
 | :------- | :------- | :-------------- | ----------: |
 | **name** | String | Name of grid | **required** |
+| **slots** | [Number, null] | Number of dynamic slots | `null` |
+
+### Slots
+| **Name** | **Description** |
+| :------- | :-------------- |
+| default | Content |
+| **slot--[1..N]** | Multiple dinamic named slots |
 
 ## Source code
 

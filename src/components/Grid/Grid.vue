@@ -1,6 +1,12 @@
 <template>
   <div class="grid" :class="`grid--${name}`">
     <slot />
+
+    <template v-for="(slot, index) in items">
+      <div :key="`slot${index}`">
+        <slot :name="slot" />
+      </div>
+    </template>
   </div>
 </template>
 
@@ -12,6 +18,24 @@ export default {
     name: {
       type: String,
       required: true,
+    },
+    slots: {
+      type: [Number, null],
+      required: false,
+      default: null,
+    },
+  },
+
+  computed: {
+    items() {
+      if (this.slots) {
+        const items = [];
+        for (let i = 1; i <= this.slots; i++) {
+          items.push(`slot--${i}`);
+        }
+        return items;
+      }
+      return null;
     },
   },
 };

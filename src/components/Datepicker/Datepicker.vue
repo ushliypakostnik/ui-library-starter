@@ -4,7 +4,7 @@
       <div
         class="panels-button"
         v-for="(panel, index) in availablePanels"
-        :key="index"
+        :key="`panel${index}`"
         :class="{ 'is-current': panel === currentPanel }"
         @click="currentPanel = panel"
       >
@@ -16,7 +16,7 @@
       <div
         class="preset"
         v-for="(entry, index) in availablePresets"
-        :key="index"
+        :key="`preset${index}`"
       >
         <input type="radio" v-model="preset" :id="entry" :value="entry" />
         <label :for="entry">
@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="calendar-days-name">
-        <div class="day" v-for="(day, index) in firstWeek" :key="index">
+        <div class="day" v-for="(day, index) in firstWeek" :key="`day${index}`">
           <span>
             {{ day.name }}
           </span>
@@ -111,7 +111,7 @@
         <div
           class="quarter"
           v-for="(quarter, index) in yearQuarters"
-          :key="index"
+          :key="`quarter${index}`"
           :class="quarterClasses(quarter)"
           @click="selectQuarter(quarter)"
           @mouseover="hoverizeQuarter(quarter.range.start, quarter.range.end)"
@@ -122,7 +122,7 @@
             <div
               class="month"
               v-for="(month, index) in quarter.months"
-              :key="index"
+              :key="`month${index}`"
             >
               <span>
                 {{ month.displayDate }}
@@ -138,7 +138,7 @@
         <div
           class="year"
           v-for="(year, index) in years"
-          :key="index"
+          :key="`year${index}`"
           :class="yearClasses(year)"
           @click="selectYear(year)"
           @mouseover="hoverizeYear(year)"

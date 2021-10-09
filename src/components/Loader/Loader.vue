@@ -1,6 +1,6 @@
 <template>
   <div class="spinner" :class="`spinner--${sizeGood}`">
-    <div v-for="(item, index) in parts" :key="index" />
+    <div v-for="(item, index) in parts" :key="`item${index}`" />
   </div>
 </template>
 

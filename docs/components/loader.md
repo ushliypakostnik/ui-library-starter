@@ -31,7 +31,7 @@ A component provides a spinner element.
 </div>
 
 <div class="test-block">
-  <Loader :size="32" />
+  <Loader :size="48" />
 </div>
 
 <div class="test-block">
@@ -43,7 +43,7 @@ A component provides a spinner element.
 ### Props
 | **Name** | **Type** | **Description** | **Default** |
 | :------- | :------- | :-------------- | ----------: |
-| **size** | Number | Spinner size |  `72` |
+| **size** | Number: `16`, `20`, `24`, `32`, `48`, `72` | Spinner size |  `72` |
 
 ## Source code
 

@@ -51,6 +51,13 @@ $wrapper = {
 }
 ```
 
+## API
+
+### Slots
+| **Name** | **Description** |
+| :------- | :-------------- |
+| default | Content |
+
 ## Source code
 
 <code class="nowrap">@/src/components/Wrapper/Wrapper.vue</code>
