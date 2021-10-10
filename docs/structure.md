@@ -17,7 +17,7 @@
 │  │  ├─ others.md
 │  │  ├─ stylebase.md
 │  │  └─ typography.md
-│  ├─ sanbox/ // sandbox view
+│  ├─ sandbox/ // sandbox view
 │  │  └─ sandbox.md
 │  ├─ links.md // useful reading links
 │  ├─ README.md // homepage
