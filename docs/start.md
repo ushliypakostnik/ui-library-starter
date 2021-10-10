@@ -188,7 +188,7 @@ export { default as TestTypography } from './tests/TestTypography';
 $ npm run docs:dev
 ```
 
-Ознакомтесь с разделом [Constants](https://ui-library-starter.netlify.app/constants/stylebase.html) документации к исходному проекту.
+Ознакомьтесь с разделом [Constants](https://ui-library-starter.netlify.app/constants/stylebase.html) документации к исходному проекту.
 
 Вам необходимо настроить препроцессор вашей библиотеки в точном соответсвии с вашим руководством по фирменному стилю.
 
@@ -351,7 +351,7 @@ export default {
 
 В реальных проектах вам потребуется очень часто закрывать «самые дорогие требования» с помощью аккуратно подобранных подходящих готовых решений. В таких случаях логично будет создавать обертку над чужим модулем, предоставляющую всю необходимую кастомизацию. Пример этого: [Select](/components/select).
 
-Импортируйте модуль как обычно в главном файле <code class="nowrap">@/src/main.js</code>: 
+Установите и Импортируйте модуль как обычно в главном файле <code class="nowrap">@/src/main.js</code>: 
 
 ```js
 import vSelect from 'vue-select';
