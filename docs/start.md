@@ -328,7 +328,56 @@ module.exports = {
 };
 ```
 
-## Use the sandbox
+### Using third party modules
+
+::: warning
+Используйте только относительные пути для импорта чего-либо в javascript ваших компонентов. Не используйте «абсолютные» алиасы:
+:::
+
+```vue
+<script>
+import moment from '../../../node_modules/moment/moment';
+import { dateFilter } from '../../../node_modules/vue-date-fns/src/index';
+
+import Icon from '../Icon/Icon';
+
+export default {
+  components: {
+    Icon,
+  },
+};
+</script>
+```
+
+В реальных проектах вам потребуется очень часто закрывать «самые дорогие требования» с помощью аккуратно подобранных подходящих готовых решений. В таких случаях логично будет создавать обертку над чужим модулем, предоставляющую всю необходимую кастомизацию. Пример этого: [Select](/components/select).
+
+Импортируйте модуль как обычно в главном файле <code class="nowrap">@/src/main.js</code>: 
+
+```js
+import vSelect from 'vue-select';
+import 'vue-select/dist/vue-select.css';
+
+Vue.component('v-select', vSelect);
+```
+
+Так как мы используем глобальные стили собственной кастомизации модуля - невозможно будет защитить стили перекастомизации в SFC-обертке с помощью <code class="nowrap">scoped</code>:
+
+```vue
+<style lang="stylus">
+@import "~/src/stylus/_stylebase.styl";
+
+.vs
+  &__dropdown-toggle
+    // ...
+
+  // ...
+
+// ...
+</style>
+```
+
+
+### Use the sandbox
 
 Используйте специальный компонент <code class="nowrap">@/src/components/Sandbox/Sandbox.vue</code> и роут документации <code class="nowrap">Sandbox</code> как экспериментальную площадку и холст для создания новых компонент на простых мокках или тестирования взаимодействия между ними. Хотя, очевидно, некоторые компоненты, такие как, например, лейаут - удобнее создавать непосредственно в проекте и уже после этого переносить в библиотеку.
 
