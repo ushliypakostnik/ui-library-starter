@@ -17,7 +17,7 @@ $colors = {
 }
 // Dependencies colors
 $colors["text"] = $colors.sea
-$colors["placeholder"] = rgba($colors.sea, 0.6)
+$colors["placeholder"] = rgba($colors.sea, $opacites.rock)
 $colors["primary"] = $colors.cat
 $colors["secondary"] = $colors.dog
 ```
