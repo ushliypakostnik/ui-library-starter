@@ -97,11 +97,11 @@ $input
     @extend $lineOverflow
     position absolute
     left $inputs.padding
-    max-width calc(100% - 32px)
+    max-width "calc(100% - %s)" % $inputs.padding
     color $colors.bird
     $text("natasha")
 
 
 // Shadows
 $shadow
-  box-shadow: 0 10px 32px $colors.shadows;
+  box-shadow 0 10px 32px $colors.shadows
