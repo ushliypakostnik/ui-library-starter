@@ -167,7 +167,6 @@
 </template>
 
 <script>
-import moment from '../../../node_modules/moment/moment';
 import { dateFilter } from '../../../node_modules/vue-date-fns/src/index';
 import {
   addDays,
@@ -245,7 +244,7 @@ const locales = {
 const RANGE_PANELS = ['days', 'weeks', 'months', 'quarters', 'years'];
 const SINGLE_PANELS = ['day'];
 
-const FULL_ISO_FORMAT = 'YYYY-MM-DDTHH:mm:ss.SSSZ';
+const FULL_ISO_FORMAT = 'YYYY-MM-DDTHH:mm:ssZ';
 const UNIX_FORMAT = 'X';
 
 export default {
@@ -281,7 +280,7 @@ export default {
       default: false,
     },
     panel: {
-      type: String,
+      type: [String, null],
       default: null,
     },
     yearsCount: {
@@ -289,19 +288,19 @@ export default {
       default: 2,
     },
     yearsPast: {
-      type: Number,
+      type: [Number, null],
       default: null,
     },
     yearsFuture: {
-      type: Number,
+      type: [Number, null],
       default: null,
     },
     allowFrom: {
-      type: [Number, String],
+      type: [Number, String, null],
       default: null,
     },
     allowTo: {
-      type: [Number, String],
+      type: [Number, String, null],
       default: null,
     },
     unixtime: {
@@ -309,11 +308,11 @@ export default {
       default: true,
     },
     resetTitle: {
-      type: String,
+      type: [String, null],
       default: null,
     },
     submitTitle: {
-      type: String,
+      type: [String, null],
       default: null,
     },
     presets: {
@@ -380,8 +379,8 @@ export default {
       this.aFrom = this.allowFrom;
       this.aTo = this.allowTo;
     } else {
-      this.aFrom = moment(this.allowFrom, UNIX_FORMAT).format();
-      this.aTo = moment(this.allowTo, UNIX_FORMAT).format();
+      this.aFrom = format(new Date(this.allowFrom * 1000), FULL_ISO_FORMAT);
+      this.aTo = format(new Date(this.allowTo * 1000), FULL_ISO_FORMAT);
     }
   },
 
@@ -546,8 +545,8 @@ export default {
         };
       }
       return {
-        to: moment(this.values.from).format(UNIX_FORMAT),
-        from: moment(this.values.to).format(UNIX_FORMAT),
+        to: format(this.values.to, UNIX_FORMAT),
+        from: format(this.values.from, UNIX_FORMAT),
       };
     },
   },

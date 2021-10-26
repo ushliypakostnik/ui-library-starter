@@ -7,20 +7,36 @@ Component providing a classic datapicker with rotating qualities:
 * Easy mode switching: single / band
 * Range The mode is made "on one sheet"
 * Mode of operation with weeks, months, quarterly periods and years
+* Works in both unixtime and ISO formats
 
 ## Connection
 
 ```vue
 <template>
-  <Datepicker
-    :range="true"
-    :allowFrom="1405398400"
-    :allowTo="1705398400"
-    :yearsFuture="2"
-    :yearsPast="4"
-    panel="quarters"
-    @select="dateSelect"
-  />
+  <section>
+    <!-- unixtime -->  
+    <Datepicker
+      :range="true"
+      :allowFrom="1405398400"
+      :allowTo="1705398400"
+      :yearsFuture="2"
+      :yearsPast="4"
+      panel="quarters"
+      @select="dateSelect"
+    />
+  
+    <!-- ISO -->  
+    <Datepicker
+      :range="true"
+      allowFrom="2014-07-15T08:26:40+04:00"
+      allowTo="2024-01-16T12:46:40+03:00"
+      :yearsFuture="2"
+      :yearsPast="4"
+      panel="quarters"
+      :unixtime="false"
+      @select="dateSelect"
+    />
+  </section>
 </template>
 
 <script>
