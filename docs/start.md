@@ -336,7 +336,6 @@ module.exports = {
 
 ```vue
 <script>
-import moment from '../../../node_modules/moment/moment';
 import { dateFilter } from '../../../node_modules/vue-date-fns/src/index';
 
 import Icon from '../Icon/Icon';
