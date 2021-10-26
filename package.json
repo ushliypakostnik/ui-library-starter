@@ -1,7 +1,7 @@
 {
   "name": "ui-library-starter",
   "description": "Vue Components UI Library Starter",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "private": false,
   "main": "dist/ui-library-starter.umd.min.js",
   "unpkg": "dist/ui-library-starter.umd.min.js",
